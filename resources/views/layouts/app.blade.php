@@ -8,7 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>Moody in the City</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -89,7 +89,10 @@
                     <a class="nav-link" href="#"><strong>Local Business</strong></a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#"><strong>Home</strong></a>
+                    <a class="nav-link" href="#"><i class="fab fa-youtube"></i></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="fab fa-facebook-square"></i></i></a>
                   </li>
                 </ul>
                 </div>
@@ -100,5 +103,10 @@
             @yield('content')
         </main>
     </div>
+    <!-- <footer class="footer">
+      <div class="container">
+        <span class="text-muted">this is a test</span>
+      </div>
+    </footer> -->
 </body>
 </html>
