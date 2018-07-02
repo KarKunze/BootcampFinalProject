@@ -16,6 +16,7 @@
     <!-- Fonts -->
     <link rel="dns-prefetch" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,600" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -25,21 +26,28 @@
         <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
+                    Moody in the City
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <div class="collapse navbar-collapse flex-md-column" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
 
                     </ul>
 
                     <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ml-auto">
-                        <!-- Authentication Links -->
+                    <ul class="navbar-nav ml-auto small">
+                      <li>
+                        <form class="form-inline ml-auto">
+              <div class="md-form my-0">
+                  <input class="form-control-xs" type="text" placeholder="Search" aria-label="Search">
+              </div>
+              <button href="#" class="btn-sm btn-light my-0 ml-sm-0" type="submit"><i class="fas fa-search"></i></button>
+          </form>
+                      </li>
                         @guest
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
@@ -67,6 +75,23 @@
                             </li>
                         @endguest
                     </ul>
+                    <ul class="navbar-nav ml-auto">
+                  <li class="nav-item">
+                    <a class="nav-link" href="#"><strong>Art</strong></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#"><strong>Music</strong></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#"><strong>Places</strong></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#"><strong>Local Business</strong></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#"><strong>Home</strong></a>
+                  </li>
+                </ul>
                 </div>
             </div>
         </nav>
