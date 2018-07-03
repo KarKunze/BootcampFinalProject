@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+
 <div class="container-fluid">
   <div class="jumbotron jumbotron-fluid">
   <div class="container">
@@ -19,6 +20,8 @@
                 <li class="list-group-item">Cras justo odio</li>
                 <li class="list-group-item">Dapibus ac facilisis in</li>
                 <li class="list-group-item">Vestibulum at eros</li>
+                <li class="list-group-item">Cras justo odio</li>
+                <li class="list-group-item">Dapibus ac facilisis in</li>
               </ul>
             </div>
             <div class="card" style="margin-top: 30px; margin-bottom: 30px;">
@@ -42,4 +45,5 @@
   </div>
 
 </div>
+
 @endsection

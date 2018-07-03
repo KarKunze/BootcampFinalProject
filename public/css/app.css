@@ -10419,6 +10419,7 @@ a.text-dark:focus {
 
 .navbar {
   font-family: 'Spectral', serif;
+  margin-bottom: 20px;
 }
 
 a.navbar-brand {
