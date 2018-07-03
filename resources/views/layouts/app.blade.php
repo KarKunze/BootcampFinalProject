@@ -27,7 +27,7 @@
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
             <div class="container-fluid">
-              <a href="index.html" class="navbar-left"><img src="storage/walkinghorse.png" height="80" width="100"></a>
+              <a href="index.html" class="navbar-left"><img src="storage/walkinghorse.png" height="80" width="90"></a>
                 <a class="navbar-brand" href="{{ url('/index') }}">
                     Moody in the City
                 </a>
@@ -89,7 +89,7 @@
                     <a class="nav-link" href='/places'><strong>Places</strong></a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href='/eatdrink'><strong>Eat/Drink</strong></a>
+                    <a class="nav-link" href='/eatdrink'><strong>Eat&Drink</strong></a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href='/local'><strong>Local</strong></a>
@@ -104,7 +104,7 @@
                 </div>
             </div>
         </nav>
-        
+
         <main class="py-4">
             @yield('content')
         </main>

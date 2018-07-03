@@ -5,25 +5,26 @@
 <div class="container-fluid">
   <div class="jumbotron jumbotron-fluid">
   <div class="container">
-    <!-- <h1 class="display-4">Fluid jumbotron</h1> -->
-    <p class="lead">This might have pictures</p>
+    <!-- <h1 class="display-2">Moody in the City</h1> -->
+    <h2 class="lead">Your unofficial guide to Lexington, Fayette County, and beyond.</h2>
   </div>
 </div>
   <div class="container-fluid">
       <div class="row">
-          <div class="col-lg-4">
+          <div class="col-md-4">
             <div class="card">
               <div class="card-header">
-                Featured
+                Promoting our local arts, music,<br>events, places, and businesses
               </div>
               <ul class="list-group list-group-flush">
-                <li class="list-group-item">Cras justo odio</li>
-                <li class="list-group-item">Dapibus ac facilisis in</li>
-                <li class="list-group-item">Vestibulum at eros</li>
-                <li class="list-group-item">Cras justo odio</li>
-                <li class="list-group-item">Dapibus ac facilisis in</li>
+                <li class="list-group-item text-center"><img src="storage/art.jpg" height="100" width="120"><a class="nav-link" href='/art'><strong>Art</strong></a></li>
+                <li class="list-group-item text-center"><img src="storage/band.jpg" height="100" width="120"><a class="nav-link" href='/music'><strong>Music</strong></a></li>
+                <li class="list-group-item text-center"><img src="storage/place.jpg" height="100" width="120"><a class="nav-link" href='/places'><strong>Places</strong></a></li>
+                <li class="list-group-item text-center"><img src="storage/drink.jpg" height="100" width="120"><a class="nav-link" href='/eatdrink'><strong>Eat & Drink</strong></a></li>
+                <li class="list-group-item text-center"><img src="storage/books.jpg" height="100" width="120"><a class="nav-link" href='/local'><strong>Local Business</strong></a></li>
               </ul>
             </div>
+
             <div class="card" style="margin-top: 30px; margin-bottom: 30px;">
               <div class="card-body">
                 <div class="responsiveCal">
@@ -45,5 +46,4 @@
   </div>
 
 </div>
-
 @endsection
