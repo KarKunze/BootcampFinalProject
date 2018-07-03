@@ -40,6 +40,9 @@ class PagesController extends Controller {
         return view('pages.local');
     }
 
+    public function getEatdrink() {
+        return view('pages.eatdrink');
+    }
 
 
 

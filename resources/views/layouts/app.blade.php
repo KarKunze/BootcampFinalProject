@@ -15,19 +15,10 @@
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,600" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway|Spectral" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
 
     <!-- Styles -->
-    <style>
-    .responsiveCal {
-      position: relative; padding-bottom: 75%; height: 0; overflow: hidden;
-      }
-
-    .responsiveCal iframe {
-      position: absolute; top:0; left: 0; width: 100%; height: 100%;
-    }
-    </style>
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
 
@@ -35,8 +26,9 @@
 <body>
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
-            <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
+            <div class="container-fluid">
+              <a href="index.html" class="navbar-left"><img src="storage/walkinghorse.png" height="80" width="100"></a>
+                <a class="navbar-brand" href="{{ url('/index') }}">
                     Moody in the City
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
@@ -88,16 +80,19 @@
                     </ul>
                     <ul class="navbar-nav ml-auto">
                   <li class="nav-item">
-                    <a class="nav-link" href="#"><strong>Art</strong></a>
+                    <a class="nav-link" href='/art'><strong>Art</strong></a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#"><strong>Music</strong></a>
+                    <a class="nav-link" href='/music'><strong>Music</strong></a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#"><strong>Places</strong></a>
+                    <a class="nav-link" href='/places'><strong>Places</strong></a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#"><strong>Local Business</strong></a>
+                    <a class="nav-link" href='/eatdrink'><strong>Eat/Drink</strong></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href='/local'><strong>Local</strong></a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="#"><i class="fab fa-youtube"></i></a>
