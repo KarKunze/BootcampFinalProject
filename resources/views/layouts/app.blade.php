@@ -42,7 +42,7 @@
                     </ul>
 
                     <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ml-auto small">
+                    <ul class="navbar-nav ml-auto">
                       <li>
                         <form class="form-inline ml-auto">
               <div class="md-form my-0">
@@ -75,6 +75,9 @@
                                         @csrf
                                     </form>
                                 </div>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href='#'><strong>Add a post!</strong></a>
                             </li>
                         @endguest
                     </ul>

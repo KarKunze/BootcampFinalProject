@@ -10440,6 +10440,11 @@ a:hover {
   font-size: 20px;
 }
 
+.lead {
+  font-family: 'Spectral', serif;
+  font-size: 30px;
+}
+
 p {
   font-family: 'Raleway', sans-serif;
 }
@@ -10450,6 +10455,8 @@ p {
 }
 
 .card-header {
+  font-family: 'Spectral', serif;
+  font-size: 20px;
   background-color: #0059b2;
   color: #e5eef7;
 }
