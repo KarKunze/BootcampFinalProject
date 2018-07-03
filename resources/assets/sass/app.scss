@@ -15,27 +15,51 @@
 
 .navbar {
   font-family: 'Spectral', serif;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 a.navbar-brand {
   margin-left: 3px;
-  // color: #0080ff;
   font-size: 40px;
 }
 
 .navbar-light .navbar-brand {
-    color: #000080;
+    color: #0059b2;
+    // color: #000080;
 }
 
-.list {
+a:hover {
+    color: #000080 !important;
+}
+
+.list-group-item {
   font-family: 'Raleway', sans-serif;
+  font-size: 20px;
 }
 
 p {
   font-family: 'Raleway', sans-serif;
 }
 
+.jumbotron {
+  background-color: #0059b2;
+  color: #e5eef7
+}
+
+.card-header {
+  background-color: #0059b2;
+  color: #e5eef7;
+}
+
+.card-body {
+  background-color: #e5eef7;
+}
+
+img {
+    vertical-align: middle;
+    float:right;
+    border-style: none;
+}
 
 .responsiveCal {
   position: relative;

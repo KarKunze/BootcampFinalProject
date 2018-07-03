@@ -4,8 +4,8 @@
 <div class="container-fluid">
   <div class="jumbotron jumbotron-fluid">
   <div class="container">
-    <!-- <h1 class="display-4">Fluid jumbotron</h1> -->
-    <p class="lead">This might have pictures</p>
+    <!-- <h1 class="display-2">Moody in the City</h1> -->
+    <h2 class="lead">Your unofficial guide to Lexington, Fayette County, and beyond.</h2>
   </div>
 </div>
   <div class="container-fluid">
@@ -13,12 +13,14 @@
           <div class="col-lg-4">
             <div class="card">
               <div class="card-header">
-                Featured
+                Promoting our local arts, music,<br>events, places, and businesses
               </div>
               <ul class="list-group list-group-flush">
-                <li class="list-group-item">Cras justo odio</li>
-                <li class="list-group-item">Dapibus ac facilisis in</li>
-                <li class="list-group-item">Vestibulum at eros</li>
+                <li class="list-group-item">Art</li>
+                <li class="list-group-item">Music</li>
+                <li class="list-group-item">Places</li>
+                <li class="list-group-item">Eat and Drink</li>
+                <li class="list-group-item">Local Business</li>
               </ul>
             </div>
             <div class="card" style="margin-top: 30px; margin-bottom: 30px;">
