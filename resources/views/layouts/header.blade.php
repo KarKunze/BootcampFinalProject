@@ -1,5 +1,5 @@
 
-    
+
         <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
             <div class="container-fluid">
               <a href="index.html" class="navbar-left"><img src="storage/walkinghorse.png" height="80" width="90"></a>
@@ -82,3 +82,12 @@
                 </div>
             </div>
         </nav>
+
+        <div class="container-fluid">
+          <div class="jumbotron jumbotron-fluid">
+          <div class="container">
+            <h1 class="display-2">@yield('page-title')</h1>
+            <h2 class="lead">Your unofficial guide to Lexington, Fayette County, and beyond.</h2>
+          </div>
+        </div>
+</div>

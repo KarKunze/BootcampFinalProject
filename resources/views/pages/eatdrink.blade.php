@@ -1,14 +1,10 @@
 @extends('layouts.app')
 
+@section('page-title', ('Eat and Drink in the City'))
+
 @section('content')
 
-<div class="container-fluid">
-  <div class="jumbotron jumbotron-fluid">
-  <div class="container">
-    <!-- <h1 class="display-2">Moody in the City</h1> -->
-    <h2 class="lead">Your unofficial guide to Lexington, Fayette County, and beyond.</h2>
-  </div>
-</div>
+
   <div class="container-fluid">
       <div class="row">
           <div class="col-md-4">
