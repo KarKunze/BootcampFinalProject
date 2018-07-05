@@ -29,7 +29,7 @@ Route::get('eatdrink', 'PagesController@getEatdrink')->name('eatdrink');
 
 
 Route::get('/', function () {
-    return view('test');
+    return view('pages.test');
 });
 
 Auth::routes();

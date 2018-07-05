@@ -1,33 +1,15 @@
 @extends('layouts.app')
 
+@section('page-title', ('Moody in the City'))
+
 @section('content')
-<div class="container-fluid">
-  <div class="jumbotron jumbotron-fluid">
-  <div class="container">
-    <!-- <h1 class="display-2">Moody in the City</h1> -->
-    <h2 class="lead">Your unofficial guide to Lexington, Fayette County, and beyond.</h2>
-  </div>
-</div>
+
+
   <div class="container-fluid">
       <div class="row">
-          <div class="col-lg-4">
+          <div class="col-md-4">
             <div class="card">
-              <div class="card-header">
-                Promoting our local arts, music,<br>events, places, and businesses
-              </div>
-              <ul class="list-group list-group-flush">
-                <li class="list-group-item">Art</li>
-                <li class="list-group-item">Music</li>
-                <li class="list-group-item">Places</li>
-                <li class="list-group-item">Eat and Drink</li>
-                <li class="list-group-item">Local Business</li>
-              </ul>
-            </div>
-
-                <div class="responsiveCal">
-                <iframe src="https://calendar.google.com/calendar/b/1/embed?showTitle=0&amp;showNav=0&amp;showDate=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;mode=AGENDA&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=moodyinthecity%40gmail.com&amp;color=%231B887A&amp;ctz=America%2FNew_York" style="border-width:0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
-              </div>
-              </div>
+            @include('layouts.sidecolumn')
             </div>
           </div>
           <div class="col-lg-8">
@@ -38,5 +20,5 @@
       </div>
   </div>
 
-</div>
+
 @endsection
