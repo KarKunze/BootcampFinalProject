@@ -10446,6 +10446,8 @@ p {
 
 .jumbotron {
   background-color: #0059b2;
+  background-image: url("/storage/skyline.jpg");
+  background-size: cover;
   color: #e5eef7;
 }
 

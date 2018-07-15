@@ -26,8 +26,6 @@ Route::get('places', 'PagesController@getPlaces')->name('places');
 
 Route::get('eatdrink', 'PagesController@getEatdrink')->name('eatdrink');
 
-
-
 Route::get('/', function () {
     return view('pages.test');
 });

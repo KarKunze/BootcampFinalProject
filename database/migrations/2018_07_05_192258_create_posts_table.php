@@ -22,6 +22,8 @@ class CreatePostsTable extends Migration
             $table->boolean('status');
             $table->integer('posted_by');
             $table->string('image');
+            $table->integer('like');
+            $table->integer('dislike');
             $table->timestamps();
         });
     }
