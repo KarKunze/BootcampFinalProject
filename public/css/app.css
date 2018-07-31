@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Raleway|Spectral);/*!
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro|Spectral);/*!
  * Bootstrap v4.1.1 (https://getbootstrap.com/)
  * Copyright 2011-2018 The Bootstrap Authors
  * Copyright 2011-2018 Twitter, Inc.
@@ -10411,6 +10411,10 @@ a.text-dark:focus {
   }
 }
 
+#post-footer {
+  border-bottom: 1px solid #ccc;
+}
+
 .navbar-laravel {
   background-color: #fff;
   -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
@@ -10436,12 +10440,13 @@ a:hover {
 }
 
 .list-group-item {
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Spectral', sans-serif;
   font-size: 20px;
 }
 
 p {
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Spectral', sans-serif;
+  font-size: 16px;
 }
 
 .jumbotron {
@@ -10449,11 +10454,13 @@ p {
   background-image: url("/storage/skyline.jpg");
   background-size: cover;
   color: #e5eef7;
+  margin-bottom: 5px;
 }
 
 .display-2 {
   font-family: 'Spectral', serif;
   font-size: 50px;
+  font-weight: 500;
   text-align: center;
 }
 
@@ -10472,6 +10479,15 @@ p {
 
 .card-body {
   background-color: #e5eef7;
+  padding-left: 5px;
+}
+
+#postcard {
+  padding: 5px;
+}
+
+.createPost {
+  font-family: 'Spectral', serif;
 }
 
 img {

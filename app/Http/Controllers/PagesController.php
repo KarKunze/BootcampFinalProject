@@ -44,6 +44,9 @@ class PagesController extends Controller {
         return view('pages.eatdrink');
     }
 
+    public function getCreate() {
+        return view('posts.create');
+    }
 
 
 }

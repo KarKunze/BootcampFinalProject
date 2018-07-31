@@ -27,5 +27,17 @@ class DatabaseSeeder extends Seeder
           ]);
 
         }
+
+        DB::table('posts')->insert([
+          'title' => 'test',
+          'body' => 'Let me not to the marriage of true minds Admit impediments. Love is not love Which alters when it alteration finds, Or bends with the remover to remove. ',
+          'status' => 1,
+          'creator_id' => '1',
+          'category' => '2',
+          'created_at' => Carbon::now(),
+          'updated_at' => Carbon::now()
+        ]);
+
     }
-}
+
+  }

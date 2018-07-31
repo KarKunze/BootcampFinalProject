@@ -8,7 +8,7 @@
         <title>Laravel</title>
 
         <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Raleway|Spectral" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro|Spectral" rel="stylesheet">
 
         <!-- Styles -->
         <style>

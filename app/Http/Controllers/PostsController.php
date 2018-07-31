@@ -3,8 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Post;
 
-class PostController extends Controller
+class PostsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,7 +14,9 @@ class PostController extends Controller
      */
     public function index()
     {
-        //
+        // /posts
+        $posts = Post::all();
+        return view('posts.index', compact('posts'));
     }
 
     /**
@@ -23,7 +26,8 @@ class PostController extends Controller
      */
     public function create()
     {
-        //
+        // /posts/create
+        return view('posts.create');
     }
 
     /**
@@ -34,7 +38,28 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // POST /posts
+        // Post::create(request(['title', 'category', 'tag', 'body']));
+
+// dd(request()->all());
+
+        $post = new Post;
+
+        //add max
+        $this->validate(request(), [
+            'title' => 'required',
+            'category' => 'required',
+            'body' => 'required'
+        ]);
+
+        $post->title = request('title');
+        $post->title = request('category');
+        $post->title = request('tag');
+        $post->title = request('body');
+
+        $post->save();
+
+        return redirect('posts');
     }
 
     /**
@@ -45,7 +70,8 @@ class PostController extends Controller
      */
     public function show($id)
     {
-        //
+        // GET /posts/id
+        return view('posts.show');
     }
 
     /**
@@ -56,7 +82,7 @@ class PostController extends Controller
      */
     public function edit($id)
     {
-        //
+        // GET /posts/id/edit
     }
 
     /**
@@ -68,7 +94,7 @@ class PostController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        // PATCH /posts/id
     }
 
     /**
@@ -79,6 +105,6 @@ class PostController extends Controller
      */
     public function destroy($id)
     {
-        //
+        // DELETE /posts/id
     }
 }
