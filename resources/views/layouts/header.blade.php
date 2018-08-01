@@ -52,7 +52,7 @@
                                 </div>
                             </li>
                             <li class="nav-item">
-                              <a class="nav-link" href='#'><strong>Add a post!</strong></a>
+                              <a class="nav-link" href='posts/create'><strong>Add a post!</strong></a>
                             </li>
                         @endguest
                     </ul>

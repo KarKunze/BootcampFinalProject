@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('/layouts.app')
 
 @section ('content')
 
@@ -15,13 +15,16 @@
           <input type="text" class="form-control" id="FormControlInput" name="title">
         </div>
         <div class="form-group">
-          <label for="FormControlSelect">Select a category</label>
-          <select class="form-control" id="categorySelect" name="categorySelect">
-            <option>art</option>
-            <option>music</option>
-            <option>food & drink</option>
-            <option>places to go</option>
-            <option>local businesses</option>
+          <label for="FormControlSelect">Category</label>
+          <select class="form-control" id="category_id" name="category_id">
+            <option disabled selected value> -- select a category -- </option>
+            @foreach ($categories as $category)
+            <option value="{{ $category->id }}">{{ $category->name }}</option>
+            <!-- <option value=2>music</option>
+            <option value=3>food & drink</option>
+            <option value=4>places to go</option>
+            <option value=5>local businesses</option> -->
+            @endforeach
           </select>
         </div>
         <div class="form-group">
@@ -30,7 +33,7 @@
         </div>
         <div class="form-group">
           <label for="FormControlTextarea">Share your experience</label>
-          <textarea class="form-control" id="body" name="body" rows="8"></textarea>
+          <textarea class="form-control" id="body" name="body" rows="8" maxlength="970"></textarea>
         </div>
         <div class="form-group">
           <label for="FormControlFile">Image</label>

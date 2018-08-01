@@ -8,7 +8,7 @@
   <div class="row">
       <div class="col-lg-8">
         <div class="card" id="postcard">
-          @include('posts.index')
+          placeholder
         </div>
       </div>
       <div class="col-md-4">

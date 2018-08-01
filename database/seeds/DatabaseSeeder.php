@@ -21,19 +21,40 @@ class DatabaseSeeder extends Seeder
             'name' => $name,
             'email' => strtolower($name) . '@example.com',
             'password' => bcrypt(strtolower($name)),
-            'role_id' => 1,
+            'role_id' => 0,
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now()
           ]);
 
         }
 
+        $categoryNames = ['Art', 'Music', 'Places', 'Eat & Drink', 'Local Business'];
+
+          foreach ($categoryNames as $categoryName) {
+
+            DB::table('categories')->insert([
+              'name' => $categoryName,
+              'created_at' => Carbon::now(),
+              'updated_at' => Carbon::now()
+            ]);
+
+        }
+
+        DB::table('users')->insert([
+          'name' => 'Karla',
+          'email' => 'karlalkunze@gmail.com',
+          'password' => 'mysupersecretadminpassword51',
+          'role_id' => 1,
+          'created_at' => Carbon::now(),
+          'updated_at' => Carbon::now()
+        ]);
+
         DB::table('posts')->insert([
           'title' => 'test',
           'body' => 'Let me not to the marriage of true minds Admit impediments. Love is not love Which alters when it alteration finds, Or bends with the remover to remove. ',
           'status' => 1,
           'creator_id' => '1',
-          'category' => '2',
+          'category_id' => '2',
           'created_at' => Carbon::now(),
           'updated_at' => Carbon::now()
         ]);

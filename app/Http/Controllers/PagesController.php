@@ -25,26 +25,34 @@ class PagesController extends Controller {
     }
 
     public function getArt() {
-        return view('pages.art');
+        $posts = \App\Post::where ('category_id', '=', '1')->get();
+        return view('pages.art', compact('posts'));
     }
 
     public function getMusic() {
-        return view('pages.music');
+        $posts = \App\Post::where ('category_id', '=', '2')->get();
+        return view('pages.music', compact('posts'));
     }
 
     public function getPlaces() {
-        return view('pages.places');
+        $posts = \App\Post::where ('category_id', '=', '3')->get();
+        return view('pages.places', compact('posts'));
     }
 
     public function getLocal() {
-        return view('pages.local');
+        $posts = \App\Post::all();
+        $posts = \App\Post::where ('category_id', '=', '5')->get();
+        return view('pages.local', compact('posts'));
     }
 
     public function getEatdrink() {
-        return view('pages.eatdrink');
+        $posts = \App\Post::all();
+        $posts = \App\Post::where ('category_id', '=', '4')->get();
+        return view('pages.eatdrink', compact('posts'));
     }
 
     public function getCreate() {
+        $categories = \App\Category::all();
         return view('posts.create');
     }
 

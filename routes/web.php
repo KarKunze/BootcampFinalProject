@@ -32,7 +32,6 @@ Route::get('eatdrink', 'PagesController@getEatdrink')->name('eatdrink');
 
 Route::get('create', 'PagesController@getCreate')->name('create');
 
-Route::resource('posts', 'PostsController');
 
 Route::get('post', function () {
     return view('posts.index');
@@ -42,12 +41,16 @@ Auth::routes();
 
 Route::get('home', 'HomeController@index')->name('home');
 
+Route::resource('/posts', 'PostsController');
+
+Route::resource('/categories', 'CategoryController');
 
 
-Route::get('posts.show', 'PostsController@index');
+
+// Route::get('posts.show', 'PostsController@index');
 
 // Route::get('/posts/{post}', 'PostsController@show');
 
-Route::get('/posts/create', 'PostsController@create');
+// Route::get('/posts/create', 'PostsController@create');
 
-Route::post('/posts', 'PostsController@store');
+// Route::post('/posts', 'PostsController@store');

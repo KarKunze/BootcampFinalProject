@@ -22,7 +22,7 @@ class CreatePostsTable extends Migration
             $table->boolean('status')->default(1);
             $table->unsignedinteger('creator_id');
             $table->foreign('creator_id')->references('id')->on('users');
-            $table->integer('category');
+            $table->integer('category_id')->references('id')->on ('categories');
             $table->integer('tag')->nullable($value = true);
             $table->string('image')->nullable($value = true);
             $table->integer('like')->nullable($value = true);
