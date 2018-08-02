@@ -23,4 +23,12 @@ class post extends Model
   public function user_name(){
         return $this->user()->get()[0]->name;
   }
+
+  public function tag()
+    {
+        return $this->belongsToMany('App\Tag', 'tag');
+    }
+
+
+
 }

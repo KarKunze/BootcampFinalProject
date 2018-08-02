@@ -30,7 +30,7 @@ Route::get('places', 'PagesController@getPlaces')->name('places');
 
 Route::get('eatdrink', 'PagesController@getEatdrink')->name('eatdrink');
 
-Route::get('create', 'PagesController@getCreate')->name('create');
+Route::get('posts.create', 'PagesController@getCreate')->name('posts.create');
 
 
 Route::get('post', function () {

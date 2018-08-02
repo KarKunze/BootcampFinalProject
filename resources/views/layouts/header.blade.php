@@ -2,7 +2,7 @@
 
         <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
             <div class="container-fluid">
-              <a href="index.html" class="navbar-left"><img src="storage/walkinghorse.png" height="80" width="90"></a>
+              <a href="index.html" class="navbar-left"><img src="/storage/walkinghorse.png" height="80" width="90"></a>
                 <a class="navbar-brand" href="{{ url('/index') }}">
                     Moody in the City
                 </a>
@@ -52,7 +52,7 @@
                                 </div>
                             </li>
                             <li class="nav-item">
-                              <a class="nav-link" href='posts/create'><strong>Add a post!</strong></a>
+                              <a class="nav-link" href='/posts/create'><strong>Add a post!</strong></a>
                             </li>
                         @endguest
                     </ul>

@@ -82,8 +82,26 @@ p {
   padding-left: 5px;
 }
 
+h3 {
+  font-family: 'Spectral', serif;
+  font-size: 24px;
+  color: #0059b2;
+  padding-top: 3px;
+}
+
+#flash-message {
+  font-family: 'Spectral', serif;
+  font-size: 18px;
+  text-align: center;
+
+}
+
 #postcard {
-  padding: 5px;
+  padding: 20px;
+}
+
+#post-footer {
+  margin-top: 5px;
 }
 
 .createPost {

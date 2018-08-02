@@ -4,7 +4,7 @@
 <div class="row">
   <div class="row">
     <div class="col">
-      <h3><strong><a href="#">{{ $post->title }}</a></strong></h3>
+      <h3><strong>{{ $post->title }}</strong></h3>
     </div>
   </div>
 <div class="container">
@@ -18,7 +18,7 @@
   </div>
 
   <div class="row" id="post-footer">
-    <p> by {{ $post->user_name() }} | {{ $post->created_at }} | likes | Category: {{ $post->category_name() }} | tags | <button>edit</button><button>delete</button></p>
+    <p id="postfooter-text"> by {{ $post->user_name() }} | {{ $post->created_at->toFormattedDateString() }} | <strong>Category: </strong>{{ $post->category_name() }} | <i class="fas fa-tags"></i> {{ $post->tag }} | <i class="fa fa-thumbs-up" aria-hidden="true"></i> | <button class="btn-sm btn-outline-dark ml-3">edit</button><button class="btn-sm btn-outline-danger ml-3">delete</button></p>
   </div>
 
 </div>

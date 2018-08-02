@@ -4,24 +4,17 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class PostsController extends Controller
+class TagController extends Controller
 {
-
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Tag $tag)
     {
+        $posts = $tag->posts;
 
-        // return session('message');
-        // /posts
-        $posts = \App\Post::all();
         return view('posts.index', compact('posts'));
     }
 
@@ -32,9 +25,7 @@ class PostsController extends Controller
      */
     public function create()
     {
-        $categories = \App\Category::all();
-        $tags = \App\Tag::all();
-        return view('posts.create', compact('categories'));
+        //
     }
 
     /**
@@ -45,30 +36,7 @@ class PostsController extends Controller
      */
     public function store(Request $request)
     {
-        // POST /posts
-        // Post::create(request(['title', 'category', 'tag', 'body']));
-
-// dd(request()->all());
-
-        //add max
-        $validatedData=$request->validate([
-            'title' => 'required|max:256',
-            'category_id' => 'required',
-            'body' => 'required|max:1000'
-        ]);
-
-        $categories = \App\Category::all();
-
-        $post = new \App\Post;
-        $post->title = $request->input('title');
-        $post->category_id = $request->input('category_id');
-        $post->tag = $request->input('tag');
-        $post->body = $request->input('body');
-        $post->creator_id = \Auth::user()->id;
-
-        $post->save();
-        $request->session()->flash('status', 'Post created!');
-        return redirect()->route('posts.create');
+        //
     }
 
     /**
@@ -79,8 +47,7 @@ class PostsController extends Controller
      */
     public function show($id)
     {
-        // GET /posts/id
-        return view('posts.show');
+        //
     }
 
     /**
@@ -91,7 +58,7 @@ class PostsController extends Controller
      */
     public function edit($id)
     {
-        // GET /posts/id/edit
+        //
     }
 
     /**
@@ -103,7 +70,7 @@ class PostsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        // PATCH /posts/id
+        //
     }
 
     /**
@@ -114,6 +81,6 @@ class PostsController extends Controller
      */
     public function destroy($id)
     {
-        // DELETE /posts/id
+        //
     }
 }

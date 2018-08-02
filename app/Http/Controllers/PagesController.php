@@ -14,9 +14,10 @@ class PagesController extends Controller {
     }
 
     public function getAbout() {
-        $first = 'Karla';
-        $last = 'Kunze';
-        $fullname = $first . " " . $last;
+        $first = 'Moody';
+        $middle = 'in the';
+        $last = 'City';
+        $fullname = $first . " " . $middle . " " . $last;
         return view('pages.about')->withFullname($fullname);
     }
 
@@ -25,29 +26,27 @@ class PagesController extends Controller {
     }
 
     public function getArt() {
-        $posts = \App\Post::where ('category_id', '=', '1')->get();
+        $posts = \App\Post::latest()->where ('category_id', '=', '1')->get();
         return view('pages.art', compact('posts'));
     }
 
     public function getMusic() {
-        $posts = \App\Post::where ('category_id', '=', '2')->get();
+        $posts = \App\Post::latest()->where ('category_id', '=', '2')->get();
         return view('pages.music', compact('posts'));
     }
 
     public function getPlaces() {
-        $posts = \App\Post::where ('category_id', '=', '3')->get();
+        $posts = \App\Post::latest()->where ('category_id', '=', '3')->get();
         return view('pages.places', compact('posts'));
     }
 
     public function getLocal() {
-        $posts = \App\Post::all();
-        $posts = \App\Post::where ('category_id', '=', '5')->get();
+        $posts = \App\Post::latest()->where ('category_id', '=', '5')->get();
         return view('pages.local', compact('posts'));
     }
 
     public function getEatdrink() {
-        $posts = \App\Post::all();
-        $posts = \App\Post::where ('category_id', '=', '4')->get();
+        $posts = \App\Post::latest()->where ('category_id', '=', '4')->get();
         return view('pages.eatdrink', compact('posts'));
     }
 
