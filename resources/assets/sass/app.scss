@@ -1,6 +1,6 @@
 
 // Fonts
-@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro|Spectral");
 
 // Variables
 @import "variables";
@@ -8,7 +8,128 @@
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 
+#post-footer {
+  border-bottom: 1px solid #ccc;
+}
+
 .navbar-laravel {
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+
+.navbar {
+  font-family: 'Spectral', serif;
+  margin-bottom: 10px;
+}
+
+a.navbar-brand {
+  margin-left: 3px;
+  font-size: 40px;
+}
+
+.navbar-light .navbar-brand {
+    color: #0059b2;
+    // color: #000080;
+}
+
+a:hover {
+    color: #000080 !important;
+}
+
+.list-group-item {
+  font-family: 'Spectral', sans-serif;
+  font-size: 20px;
+}
+
+p {
+  font-family: 'Spectral', sans-serif;
+  font-size: 16px;
+  // font-family: 'Source Sans Pro', sans-serif;
+  // font-size: 16px;
+}
+
+.jumbotron {
+  // background-color: #cecece;
+  background-color: #0059b2;
+  background-image: url("/storage/skyline.jpg");
+  background-size: cover;
+  color: #e5eef7;
+  margin-bottom: 5px;
+}
+
+.display-2 {
+  font-family: 'Spectral', serif;
+  font-size: 50px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.lead {
+  font-family: 'Spectral', serif;
+  font-size: 30px;
+  text-align: center;
+}
+
+.card-header {
+  font-family: 'Spectral', serif;
+  font-size: 20px;
+  background-color: #0059b2;
+  color: #e5eef7;
+}
+
+.card-body {
+  background-color: #e5eef7;
+  padding-left: 5px;
+}
+
+h3 {
+  font-family: 'Spectral', serif;
+  font-size: 24px;
+  color: #0059b2;
+  padding-top: 3px;
+}
+
+#flash-message {
+  font-family: 'Spectral', serif;
+  font-size: 18px;
+  text-align: center;
+
+}
+
+#postcard {
+  padding: 20px;
+}
+
+#post-footer {
+  margin-top: 5px;
+}
+
+.createPost {
+  font-family: 'Spectral', serif;
+}
+
+img {
+    vertical-align: middle;
+    float:right;
+    border-style: none;
+}
+
+.responsiveCal {
+  position: relative;
+  padding-bottom: 75%;
+  margin-bottom: 5px;
+  height: 0;
+  overflow: hidden;
+  }
+
+.responsiveCal iframe {
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background-color: #cecece;
 }
