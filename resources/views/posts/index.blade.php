@@ -1,5 +1,11 @@
 
 <div class="container">
+  @if ($flash = session('status'))
+    <div id="flash-message" class="alert alert-success" role="alert">
+      {{ $flash }}
+    </div>
+  @endif
+
 @foreach ($posts as $post)
 <div class="row">
   <div class="row">

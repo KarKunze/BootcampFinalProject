@@ -6,7 +6,7 @@
 
 <div class="container">
   @if ($flash = session('status'))
-    <div id="flash-message" class="alert alert-success" role="alert">
+    <div id="flashMessage" class="alert alert-success" role="alert">
       {{ $flash }}
       <br>
       <a class="btn-sm btn-secondary mt-2" href='/index' role="button">Home</a>

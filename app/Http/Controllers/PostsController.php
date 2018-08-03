@@ -77,11 +77,11 @@ class PostsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    // public function show($id)
-    // {
-    //     // GET /posts/id
-    //     return view('posts.show', compact('posts'));
-    // }
+    public function show($id)
+    {
+        // GET /posts/id
+        return view('posts.show', compact('posts'));
+    }
 
     /**
      * Show the form for editing the specified resource.
@@ -92,8 +92,16 @@ class PostsController extends Controller
     public function edit($id)
     {
       $post = \App\Post::find($id);
+      $categories = \App\Category::all();
 
-      return view('posts.edit', compact('posts'));
+      if (\Auth::user()->role_id == 1 || $post->creator_id == \Auth::user()->id) {
+        return view('posts.edit', compact('post', 'categories'));
+      }
+      else
+      {
+          return redirect()->route('index');
+      }
+
     }
 
     /**
@@ -123,12 +131,10 @@ class PostsController extends Controller
         $post->creator_id = \Auth::user()->id;
 
         $post->save();
-        $request->session()->flash('status', 'Post updated!');
-        return redirect()->route('index');
+        $request->session()->flash('status', 'You updated your post!');
+        return redirect()->route($post->category_page());
       }
     }
-
-
 
 
     /**
@@ -144,7 +150,8 @@ class PostsController extends Controller
       if (\Auth::user()->role_id == 1 || $post->creator_id == \Auth::user()->id) {
 
         $post->delete();
-        return redirect()->route('index');
+
+        return redirect()->route($post->category_page());
 
     } else {
             // $request->session()->flash('status', 'You don\'t have permission to delete this post.');

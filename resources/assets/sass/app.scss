@@ -89,12 +89,28 @@ h3 {
   padding-top: 3px;
 }
 
-#flash-message {
+#flashMessage {
   font-family: 'Spectral', serif;
   font-size: 18px;
   text-align: center;
-
 }
+
+#flash-message {
+    font-family: 'Spectral', serif;
+    font-size: 18px;
+    text-align: center;
+    top: 20px;
+    position: absolute;
+    right: 20px;
+    z-index: 10;
+    animation: flash-message 4s forwards;
+}
+
+@keyframes flash-message {
+    0%   {opacity: 1;}
+    100% {opacity: 0; display:none;}
+}
+
 
 #postcard {
   padding: 20px;

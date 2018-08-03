@@ -3,15 +3,14 @@
 @section('page-title', ('Moody in the City'))
 
 @section ('content')
-
+@if ($flash = session('status'))
+  <div id="flash-message" class="alert alert-success" role="alert">
+    {{ $flash }}
+    <br>
+    <a class="btn-sm btn-secondary mt-2" href='/index' role="button">Home</a>
+  </div>
+@endif
 <div class="container">
-  @if ($flash = session('status'))
-    <div id="flash-message" class="alert alert-success" role="alert">
-      {{ $flash }}
-      <br>
-      <a class="btn-sm btn-secondary mt-2" href='/index' role="button">Home</a>
-    </div>
-  @endif
   <div class="card editPost">
     <div class="card-body text-white bg-secondary">
       <h4 class="card-title text-center">Edit your post</h4>
@@ -37,7 +36,7 @@
         </div>
         <div class="form-group">
           <label for="FormControlTextarea">Edit your experience</label>
-          <textarea class="form-control" id="body" name="body" rows="8" maxlength="970" value="{{ $post->body }}" required></textarea>
+          <textarea class="form-control" id="body" name="body" rows="8" maxlength="970" value="{{ $post->body }}" required>{{ $post->body }}</textarea>
         </div>
         <div class="form-group">
           <label for="FormControlFile">Add image</label>
