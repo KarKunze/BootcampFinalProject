@@ -3,11 +3,11 @@
   Promoting our local arts, music,<br>events, places, and businesses
 </div>
 <ul class="list-group list-group-flush">
-  <li class="list-group-item text-center"><img src="storage/art.jpg" height="100" width="120"><a class="nav-link" href='/art'><strong>Art</strong></a></li>
-  <li class="list-group-item text-center"><img src="storage/band.jpg" height="100" width="120"><a class="nav-link" href='/music'><strong>Music</strong></a></li>
-  <li class="list-group-item text-center"><img src="storage/place.jpg" height="100" width="120"><a class="nav-link" href='/places'><strong>Places</strong></a></li>
-  <li class="list-group-item text-center"><img src="storage/drink.jpg" height="100" width="120"><a class="nav-link" href='/eatdrink'><strong>Eat & Drink</strong></a></li>
-  <li class="list-group-item text-center"><img src="storage/books.jpg" height="100" width="120"><a class="nav-link" href='/local'><strong>Local Business</strong></a></li>
+  <li class="list-group-item text-center"><img class="menu-image" src="storage/art.jpg" height="100" width="120"><a class="nav-link" href='/art'><strong>Art</strong></a></li>
+  <li class="list-group-item text-center"><img class="menu-image" src="storage/band.jpg" height="100" width="120"><a class="nav-link" href='/music'><strong>Music</strong></a></li>
+  <li class="list-group-item text-center"><img class="menu-image" src="storage/place.jpg" height="100" width="120"><a class="nav-link" href='/places'><strong>Places</strong></a></li>
+  <li class="list-group-item text-center"><img class="menu-image" src="storage/drink.jpg" height="100" width="120"><a class="nav-link" href='/eatdrink'><strong>Eat & Drink</strong></a></li>
+  <li class="list-group-item text-center"><img class="menu-image" src="storage/books.jpg" height="100" width="120"><a class="nav-link" href='/local'><strong>Local Business</strong></a></li>
 </ul>
 </div>
 

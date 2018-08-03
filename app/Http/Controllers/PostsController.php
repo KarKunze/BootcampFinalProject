@@ -45,9 +45,7 @@ class PostsController extends Controller
      */
     public function store(Request $request)
     {
-        // POST /posts
-        // Post::create(request(['title', 'category', 'tag', 'body']));
-
+        
 // dd(request()->all());
 
         //add max
@@ -57,6 +55,11 @@ class PostsController extends Controller
             'body' => 'required|max:1000'
         ]);
 
+        $image = $request->file('image');
+        $path = \Storage::putFile('images', $image);
+          // return $path;
+
+
         $categories = \App\Category::all();
 
         $post = new \App\Post;
@@ -65,6 +68,7 @@ class PostsController extends Controller
         $post->tag = $request->input('tag');
         $post->body = $request->input('body');
         $post->creator_id = \Auth::user()->id;
+        $post->image = $path;
 
         $post->save();
         $request->session()->flash('status', 'Post created!');
@@ -122,6 +126,11 @@ class PostsController extends Controller
           'category_id' => 'required',
           'body' => 'required|max:1000'
         ]);
+
+
+        $image = $request->file('image');
+        $path = \Storage::putFile('images', $image);
+
         $category = \App\Category::all();
 
         $post = \App\Post::find($id);
@@ -129,7 +138,7 @@ class PostsController extends Controller
         $post->category_id = $request->input('category_id');
         $post->tag = $request->input('tag');
         $post->body = $request->input('body');
-        $post->creator_id = \Auth::user()->id;
+        $post->image = $path;
 
         $post->save();
         $request->session()->flash('status', 'You updated your post!');

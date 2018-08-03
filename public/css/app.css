@@ -10439,6 +10439,14 @@ a:hover {
   color: #000080 !important;
 }
 
+.post-image {
+  height: auto;
+  width: auto;
+  max-width: 300px;
+  max-height: 300px;
+  margin-bottom: 10px;
+}
+
 .list-group-item {
   font-family: 'Spectral', sans-serif;
   font-size: 20px;
@@ -10479,7 +10487,6 @@ p {
 
 .card-body {
   background-color: #e5eef7;
-  padding-left: 5px;
 }
 
 h3 {
@@ -10541,7 +10548,7 @@ h3 {
   font-family: 'Spectral', serif;
 }
 
-img {
+.menu-image {
   vertical-align: middle;
   float: right;
   border-style: none;

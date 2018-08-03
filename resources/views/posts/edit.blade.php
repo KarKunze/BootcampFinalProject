@@ -14,7 +14,7 @@
   <div class="card editPost">
     <div class="card-body text-white bg-secondary">
       <h4 class="card-title text-center">Edit your post</h4>
-      <form method="POST" action="/posts/{{ $post->id }}" style="padding:20px">
+      <form method="POST" action="/posts/{{ $post->id }}" enctype="multipart/form-data" style="padding:20px">
         @CSRF
         @method('PATCH')
         <div class="form-group">
@@ -30,10 +30,10 @@
             @endforeach
           </select>
         </div>
-        <div class="form-group">
+        <!-- <div class="form-group">
           <label for="FormControlInput">Tags</label>
           <input type="text" class="form-control" data-role="tagsinput" id="tagPlaces" name="tagPlaces">
-        </div>
+        </div> -->
         <div class="form-group">
           <label for="FormControlTextarea">Edit your experience</label>
           <textarea class="form-control" id="body" name="body" rows="8" maxlength="970" value="{{ $post->body }}" required>{{ $post->body }}</textarea>

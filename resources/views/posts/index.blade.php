@@ -14,9 +14,9 @@
 <div class="container">
   <div class="row">
     <div class="col-md-5">
-      <a href="#" class="image">
-           <img src="http://placehold.it/360x230" alt="">
-       </a>
+      <div class="text-center">
+           <img class="mx-auto d-block post-image" src="{{ asset("storage/$post->image") }}" alt="">
+      </div>
     </div>
     <div class="col-md">{{ $post->body }}</div>
   </div>
