@@ -29,6 +29,31 @@ class post extends Model
         return $this->belongsToMany('App\Tag', 'tag');
     }
 
+  public function category_page() {
+
+      switch ($this->category_id) {
+
+        case 1:
+          return 'art';
+
+        case 2:
+            return 'music';
+
+        case 3:
+            return 'places';
+
+        case 4:
+            return 'eatdrink';
+
+        case 5:
+            return 'local';
+
+        default:
+            return 'index';
+
+      }
+
+  }
 
 
 }

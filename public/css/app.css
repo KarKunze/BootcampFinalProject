@@ -10439,6 +10439,14 @@ a:hover {
   color: #000080 !important;
 }
 
+.post-image {
+  height: auto;
+  width: auto;
+  max-width: 300px;
+  max-height: 300px;
+  margin-bottom: 10px;
+}
+
 .list-group-item {
   font-family: 'Spectral', sans-serif;
   font-size: 20px;
@@ -10479,7 +10487,6 @@ p {
 
 .card-body {
   background-color: #e5eef7;
-  padding-left: 5px;
 }
 
 h3 {
@@ -10489,10 +10496,44 @@ h3 {
   padding-top: 3px;
 }
 
+#flashMessage {
+  font-family: 'Spectral', serif;
+  font-size: 18px;
+  text-align: center;
+}
+
 #flash-message {
   font-family: 'Spectral', serif;
   font-size: 18px;
   text-align: center;
+  top: 20px;
+  position: absolute;
+  right: 20px;
+  z-index: 10;
+  -webkit-animation: flash-message 4s forwards;
+          animation: flash-message 4s forwards;
+}
+
+@-webkit-keyframes flash-message {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}
+
+@keyframes flash-message {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    display: none;
+  }
 }
 
 #postcard {
@@ -10507,7 +10548,7 @@ h3 {
   font-family: 'Spectral', serif;
 }
 
-img {
+.menu-image {
   vertical-align: middle;
   float: right;
   border-style: none;

@@ -55,6 +55,12 @@ class PagesController extends Controller {
         return view('posts.create');
     }
 
+    public function getEdit() {
+        $posts = \App\Post::all();
+        return view('posts.edit');
+    }
+
+
 
 }
 

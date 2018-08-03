@@ -45,9 +45,7 @@ class PostsController extends Controller
      */
     public function store(Request $request)
     {
-        // POST /posts
-        // Post::create(request(['title', 'category', 'tag', 'body']));
-
+        
 // dd(request()->all());
 
         //add max
@@ -57,6 +55,11 @@ class PostsController extends Controller
             'body' => 'required|max:1000'
         ]);
 
+        $image = $request->file('image');
+        $path = \Storage::putFile('images', $image);
+          // return $path;
+
+
         $categories = \App\Category::all();
 
         $post = new \App\Post;
@@ -65,6 +68,7 @@ class PostsController extends Controller
         $post->tag = $request->input('tag');
         $post->body = $request->input('body');
         $post->creator_id = \Auth::user()->id;
+        $post->image = $path;
 
         $post->save();
         $request->session()->flash('status', 'Post created!');
@@ -80,7 +84,7 @@ class PostsController extends Controller
     public function show($id)
     {
         // GET /posts/id
-        return view('posts.show');
+        return view('posts.show', compact('posts'));
     }
 
     /**
@@ -91,7 +95,17 @@ class PostsController extends Controller
      */
     public function edit($id)
     {
-        // GET /posts/id/edit
+      $post = \App\Post::find($id);
+      $categories = \App\Category::all();
+
+      if (\Auth::user()->role_id == 1 || $post->creator_id == \Auth::user()->id) {
+        return view('posts.edit', compact('post', 'categories'));
+      }
+      else
+      {
+          return redirect()->route('index');
+      }
+
     }
 
     /**
@@ -103,8 +117,35 @@ class PostsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        // PATCH /posts/id
+      $post = \App\Post::find($id);
+
+      if (\Auth::user()->role_id == 1 || $post->creator_id == \Auth::user()->id) {
+
+        $validatedData = $request->validate([
+          'title' => 'required|max:256',
+          'category_id' => 'required',
+          'body' => 'required|max:1000'
+        ]);
+
+
+        $image = $request->file('image');
+        $path = \Storage::putFile('images', $image);
+
+        $category = \App\Category::all();
+
+        $post = \App\Post::find($id);
+        $post->title = $request->input('title');
+        $post->category_id = $request->input('category_id');
+        $post->tag = $request->input('tag');
+        $post->body = $request->input('body');
+        $post->image = $path;
+
+        $post->save();
+        $request->session()->flash('status', 'You updated your post!');
+        return redirect()->route($post->category_page());
+      }
     }
+
 
     /**
      * Remove the specified resource from storage.
@@ -112,8 +153,19 @@ class PostsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Request $request, $id)
     {
-        // DELETE /posts/id
+      $post = \App\Post::find($id);
+
+      if (\Auth::user()->role_id == 1 || $post->creator_id == \Auth::user()->id) {
+
+        $post->delete();
+
+        return redirect()->route($post->category_page());
+
+    } else {
+            // $request->session()->flash('status', 'You don\'t have permission to delete this post.');
+            return redirect()->route('index');
+        }
     }
 }

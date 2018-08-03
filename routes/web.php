@@ -32,6 +32,8 @@ Route::get('eatdrink', 'PagesController@getEatdrink')->name('eatdrink');
 
 Route::get('posts.create', 'PagesController@getCreate')->name('posts.create');
 
+Route::get('posts.edit', 'PagesController@getEdit')->name('posts.edit');
+
 
 Route::get('post', function () {
     return view('posts.index');
