@@ -40,7 +40,7 @@
         </div>
         <div class="form-group">
           <label for="FormControlFile">Add image</label>
-          <input type="file" class="form-control-file" id="FormControlFile" name="image">
+          <input type="file" class="form-control-file" id="FormControlFile" name="image" value="{{ asset("storage/$post->image") }}">
         </div>
         <div class="form-group">
         <button type="submit" class="btn btn-light mt-3">Update</button>

@@ -47,10 +47,7 @@ Route::resource('/posts', 'PostsController');
 
 Route::resource('/categories', 'CategoryController');
 
-Route::group(['prefix' => 'admin', 'namespace' => 'admin'], function()
-{
-    Route::resource('user', 'UserController');
-});
+
 
 // Route::get('posts.show', 'PostsController@index');
 
