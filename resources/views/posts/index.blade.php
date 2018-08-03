@@ -1,12 +1,10 @@
-
+@if ($flash = session('status'))
+  <div id="flash-message" class="alert alert-success" role="alert">
+    {{ $flash }}
+  </div>
+@endif
 <div class="container">
-  @if ($flash = session('status'))
-    <div id="flash-message" class="alert alert-success" role="alert">
-      {{ $flash }}
-    </div>
-  @endif
-
-@foreach ($posts as $post)
+  @foreach ($posts as $post)
 <div class="row">
   <div class="row">
     <div class="col">
@@ -29,12 +27,11 @@
       <form action="/posts/{{ $post->id }}" method="post">
         @method('DELETE')
         @csrf
-      <button class="btn-sm btn-outline-danger ml-3" type="submit">delete</button></p>
+        <button class="btn-sm btn-outline-danger ml-3" type="submit">delete</button></p>
       </form>
   </div>
 
 </div>
 </div>
 @endforeach
-
 </div>

@@ -122,6 +122,7 @@ class PostsController extends Controller
           'category_id' => 'required',
           'body' => 'required|max:1000'
         ]);
+        $category = \App\Category::all();
 
         $post = \App\Post::find($id);
         $post->title = $request->input('title');
