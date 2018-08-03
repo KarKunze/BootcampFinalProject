@@ -77,11 +77,11 @@ class PostsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
-    {
-        // GET /posts/id
-        return view('posts.show');
-    }
+    // public function show($id)
+    // {
+    //     // GET /posts/id
+    //     return view('posts.show', compact('posts'));
+    // }
 
     /**
      * Show the form for editing the specified resource.
@@ -91,7 +91,9 @@ class PostsController extends Controller
      */
     public function edit($id)
     {
-        // GET /posts/id/edit
+      $post = \App\Post::find($id);
+
+      return view('posts.edit', compact('posts'));
     }
 
     /**
@@ -103,8 +105,31 @@ class PostsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        // PATCH /posts/id
+      $post = \App\Post::find($id);
+
+      if (\Auth::user()->role_id == 1 || $post->creator_id == \Auth::user()->id) {
+
+        $validatedData = $request->validate([
+          'title' => 'required|max:256',
+          'category_id' => 'required',
+          'body' => 'required|max:1000'
+        ]);
+
+        $post = \App\Post::find($id);
+        $post->title = $request->input('title');
+        $post->category_id = $request->input('category_id');
+        $post->tag = $request->input('tag');
+        $post->body = $request->input('body');
+        $post->creator_id = \Auth::user()->id;
+
+        $post->save();
+        $request->session()->flash('status', 'Post updated!');
+        return redirect()->route('index');
+      }
     }
+
+
+
 
     /**
      * Remove the specified resource from storage.
@@ -112,8 +137,18 @@ class PostsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Request $request, $id)
     {
-        // DELETE /posts/id
+      $post = \App\Post::find($id);
+
+      if (\Auth::user()->role_id == 1 || $post->creator_id == \Auth::user()->id) {
+
+        $post->delete();
+        return redirect()->route('index');
+
+    } else {
+            // $request->session()->flash('status', 'You don\'t have permission to delete this post.');
+            return redirect()->route('index');
+        }
     }
 }

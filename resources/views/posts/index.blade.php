@@ -18,7 +18,13 @@
   </div>
 
   <div class="row" id="post-footer">
-    <p id="postfooter-text"> by {{ $post->user_name() }} | {{ $post->created_at->toFormattedDateString() }} | <strong>Category: </strong>{{ $post->category_name() }} | <i class="fas fa-tags"></i> {{ $post->tag }} | <i class="fa fa-thumbs-up" aria-hidden="true"></i> | <button class="btn-sm btn-outline-dark ml-3">edit</button><button class="btn-sm btn-outline-danger ml-3">delete</button></p>
+    <p id="postfooter-text"> by {{ $post->user_name() }} | {{ $post->created_at->toFormattedDateString() }} | <strong>Category: </strong>{{ $post->category_name() }} | <i class="fas fa-tags"></i> {{ $post->tag }} | <i class="fa fa-thumbs-up" aria-hidden="true"></i> |
+      <button class="btn-sm btn-outline-primary ml-3"><a href= "/posts/{{ $post->id }}/edit">edit</a></button>
+      <form action="/posts/{{ $post->id }}" method="post">
+        @method('DELETE')
+        @csrf
+      <button class="btn-sm btn-outline-danger ml-3" type="submit">delete</button></p>
+      </form>
   </div>
 
 </div>
