@@ -31,10 +31,6 @@
             @endforeach
           </select>
         </div>
-        <!-- <div class="form-group">
-          <label for="FormControlInput">Tags</label>
-          <input type="text" class="form-control" data-role="tagsinput" id="tagPlaces" name="tagPlaces">
-        </div> -->
         <div class="form-group">
           <label for="FormControlTextarea">Share your experience</label>
           <textarea class="form-control" id="body" name="body" rows="8" maxlength="970" required></textarea>

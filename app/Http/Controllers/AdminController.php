@@ -31,7 +31,7 @@ class AdminController extends Controller
     public function index()
     {
         $posts = \App\Post::all();
-        return view('/admin', compact('posts'));
+        return view('admin.index', compact('posts'));
     }
 
 
@@ -48,7 +48,7 @@ class AdminController extends Controller
       $categories = \App\Category::all();
 
       if (\Auth::user()->role_id == 1) {
-        return view('/admin', compact('post', 'categories'));
+        return view('admin.index', compact('post', 'categories'));
       }
     }
 
@@ -69,7 +69,7 @@ class AdminController extends Controller
 
         $post->save();
         $request->session()->flash('status', 'You updated the post status!');
-        return view('/admin');
+        return view('admin.index');
       }
     }
 

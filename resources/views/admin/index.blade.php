@@ -58,7 +58,7 @@
               <tbody>
                   @foreach ($posts as $post)
                   <tr>
-                  <td>{{ $post->status }}
+                  <td>
                     <form method="post" action="/admin/{{ $post->status }}">
                       		@csrf
                       		@method('PATCH')

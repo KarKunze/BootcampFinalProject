@@ -15,7 +15,11 @@
   <div class="row">
     <div class="col-md-5">
       <div class="text-center">
-           <img class="mx-auto d-block post-image" src="{{ asset("storage/$post->image") }}" alt="">
+        @if ($post->image)
+        <img class="mx-auto d-block post-image" src="{{ asset("storage/$post->image") }}" alt="">
+        @else
+        <img class="mx-auto d-block post-image" src="/storage/walkinghorse.png" alt="">
+        @endif
       </div>
     </div>
     <div class="col-md">{{ $post->body }}</div>
