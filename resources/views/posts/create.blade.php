@@ -15,7 +15,7 @@
   <div class="card createPost">
     <div class="card-body text-white bg-secondary">
       <h4 class="card-title text-center">Write a post to share!</h4>
-      <form method="POST" action="/posts" style="padding:20px">
+      <form method="POST" action="/posts" enctype="multipart/form-data" style="padding:20px">
         @CSRF
         @method('POST')
         <div class="form-group">
@@ -31,18 +31,20 @@
             @endforeach
           </select>
         </div>
-        <div class="form-group">
+        <!-- <div class="form-group">
           <label for="FormControlInput">Tags</label>
           <input type="text" class="form-control" data-role="tagsinput" id="tagPlaces" name="tagPlaces">
-        </div>
+        </div> -->
         <div class="form-group">
           <label for="FormControlTextarea">Share your experience</label>
           <textarea class="form-control" id="body" name="body" rows="8" maxlength="970" required></textarea>
         </div>
+
         <div class="form-group">
           <label for="FormControlFile">Add image</label>
           <input type="file" class="form-control-file" id="FormControlFile" name="image">
         </div>
+
         <div class="form-group">
         <button type="submit" class="btn btn-light mt-3">Submit Post</button>
         </div>
@@ -65,8 +67,6 @@
 
 
 @endsection
-
-
 
 
 
