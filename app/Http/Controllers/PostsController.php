@@ -19,10 +19,12 @@ class PostsController extends Controller
     public function index()
     {
 
-        // return session('message');
-        // /posts
+
+      if ($post->status == true){
         $posts = \App\Post::all();
         return view('posts.index', compact('posts'));
+      }
+
     }
 
     /**
@@ -45,7 +47,7 @@ class PostsController extends Controller
      */
     public function store(Request $request)
     {
-        
+
 // dd(request()->all());
 
         //add max
@@ -81,11 +83,11 @@ class PostsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
-    {
-        // GET /posts/id
-        return view('posts.show', compact('posts'));
-    }
+    // public function show($id)
+    // {
+    //
+    //     return view('posts.show', compact('posts'));
+    // }
 
     /**
      * Show the form for editing the specified resource.
@@ -126,19 +128,19 @@ class PostsController extends Controller
           'category_id' => 'required',
           'body' => 'required|max:1000'
         ]);
-
-
-        $image = $request->file('image');
-        $path = \Storage::putFile('images', $image);
-
         $category = \App\Category::all();
+
+        if ($image = $request->file('image')) {
+          $path = \Storage::putFile('images', $image);
+          $post->image = $path;
+        }
 
         $post = \App\Post::find($id);
         $post->title = $request->input('title');
         $post->category_id = $request->input('category_id');
         $post->tag = $request->input('tag');
         $post->body = $request->input('body');
-        $post->image = $path;
+
 
         $post->save();
         $request->session()->flash('status', 'You updated your post!');

@@ -34,7 +34,6 @@ Route::get('posts.create', 'PagesController@getCreate')->name('posts.create');
 
 Route::get('posts.edit', 'PagesController@getEdit')->name('posts.edit');
 
-
 Route::get('post', function () {
     return view('posts.index');
 });
@@ -44,15 +43,8 @@ Auth::routes();
 Route::get('home', 'HomeController@index')->name('home');
 
 Route::resource('/posts', 'PostsController');
-
 Route::resource('/categories', 'CategoryController');
 
-
-
-// Route::get('posts.show', 'PostsController@index');
-
-// Route::get('/posts/{post}', 'PostsController@show');
-
-// Route::get('/posts/create', 'PostsController@create');
-
-// Route::post('/posts', 'PostsController@store');
+Route::get('/admin', 'AdminController@getAdmin')->name('admin');
+Route::patch('/admin', 'AdminController@getAdmin')->name('admin');
+Route::put('/admin', 'AdminController@getAdmin')->name('admin');

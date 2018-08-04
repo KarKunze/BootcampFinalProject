@@ -39,6 +39,7 @@
           <textarea class="form-control" id="body" name="body" rows="8" maxlength="970" value="{{ $post->body }}" required>{{ $post->body }}</textarea>
         </div>
         <div class="form-group">
+          <img class="mx-auto d-block post-image" src="{{ asset("storage/$post->image") }}" alt="">
           <label for="FormControlFile">Add image</label>
           <input type="file" class="form-control-file" id="FormControlFile" name="image" value="{{ asset("storage/$post->image") }}">
         </div>
