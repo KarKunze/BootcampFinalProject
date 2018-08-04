@@ -10,6 +10,7 @@
         <div class="card" id="postcard">
           @include('posts.index')
         </div>
+        
       </div>
         <div class="col-md-4">
           <div class="card">

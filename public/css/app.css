@@ -10447,6 +10447,11 @@ a:hover {
   margin-bottom: 10px;
 }
 
+.pagination {
+  margin-top: 20px;
+  margin-bottom: 0;
+}
+
 .list-group-item {
   font-family: 'Spectral', sans-serif;
   font-size: 20px;
