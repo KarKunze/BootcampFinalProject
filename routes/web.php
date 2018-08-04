@@ -48,3 +48,4 @@ Route::resource('/categories', 'CategoryController');
 Route::get('/admin', 'AdminController@getAdmin')->name('admin');
 Route::patch('/admin', 'AdminController@getAdmin')->name('admin');
 Route::put('/admin', 'AdminController@getAdmin')->name('admin');
+Route::delete('/admin', 'AdminController@getAdmin')->name('admin');

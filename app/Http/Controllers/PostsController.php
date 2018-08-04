@@ -57,20 +57,20 @@ class PostsController extends Controller
             'body' => 'required|max:1000'
         ]);
 
-        $image = $request->file('image');
-        $path = \Storage::putFile('images', $image);
-          // return $path;
 
-
+        if ($image = $request->file('image')) {
+          $path = \Storage::putFile('images', $image);
+          $post->image = $path;
+        }
         $categories = \App\Category::all();
-
         $post = new \App\Post;
         $post->title = $request->input('title');
         $post->category_id = $request->input('category_id');
         $post->tag = $request->input('tag');
         $post->body = $request->input('body');
+        // $post->status = $request->input('status');
         $post->creator_id = \Auth::user()->id;
-        $post->image = $path;
+
 
         $post->save();
         $request->session()->flash('status', 'Post created!');

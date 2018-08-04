@@ -57,16 +57,17 @@
               </thead>
               <tbody>
                   @foreach ($posts as $post)
-                  <form method="post" action="/admin/{{ $post->status }}">
-                  		@csrf
-                  		@method('PATCH')
                   <tr>
                   <td>{{ $post->status }}
-                    <div class="form-check form-check">
+                    <form method="post" action="/admin/{{ $post->status }}">
+                      		@csrf
+                      		@method('PATCH')
+                        <div class="form-check form-check">
                         <input class="form-check-input" type="checkbox" id="status" name="status" {{ $post->status ? 'checked' : '' }}>
                         <label class="form-check-label" for="status">Approved</label>
-                    </div>
-                      <button class="btn-sm btn-outline-primary" type="submit">Save</button>
+                        </div>
+                        <button class="btn-sm btn-outline-primary" type="submit">Save</button>
+                    </form>
                   </td>
                   <td>{{ $post->id }}</td>
                   <td>{{ $post->title }}</td>

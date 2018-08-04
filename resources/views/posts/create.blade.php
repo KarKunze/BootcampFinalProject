@@ -19,7 +19,7 @@
         @CSRF
         @method('POST')
         <div class="form-group">
-          <label for="exampleFormControlInput1">Title</label>
+          <label for="exampleFormControlInput">Title</label>
           <input type="text" class="form-control" id="FormControlInput" name="title" required>
         </div>
         <div class="form-group">
@@ -39,12 +39,14 @@
           <label for="FormControlTextarea">Share your experience</label>
           <textarea class="form-control" id="body" name="body" rows="8" maxlength="970" required></textarea>
         </div>
-
         <div class="form-group">
           <label for="FormControlFile">Add image</label>
           <input type="file" class="form-control-file" id="FormControlFile" name="image">
         </div>
-
+        <!-- <div class="form-group">
+          <label for="status"></label>
+          <input type="hidden" class="form-control" id="FormControlInput" name="status" value="{{ $category->status = true }}">
+        </div> -->
         <div class="form-group">
         <button type="submit" class="btn btn-light mt-3">Submit Post</button>
         </div>

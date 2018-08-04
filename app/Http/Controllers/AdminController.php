@@ -31,9 +31,16 @@ class AdminController extends Controller
     public function index()
     {
         $posts = \App\Post::all();
-        return view('admin', compact('posts'));
+        return view('/admin', compact('posts'));
     }
 
+
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
 
     public function edit($id)
     {
@@ -41,10 +48,17 @@ class AdminController extends Controller
       $categories = \App\Category::all();
 
       if (\Auth::user()->role_id == 1) {
-        return view('admin', compact('post', 'categories'));
+        return view('/admin', compact('post', 'categories'));
       }
     }
 
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
 
     public function update(Request $request, $id)
     {
@@ -55,7 +69,7 @@ class AdminController extends Controller
 
         $post->save();
         $request->session()->flash('status', 'You updated the post status!');
-        return redirect()->route($post->admin);
+        return view('/admin');
       }
     }
 
