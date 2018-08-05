@@ -4,11 +4,7 @@
 </p>
 </div>
 
-<div>
 
-
-
-</div>
 
 
 
@@ -19,7 +15,7 @@
     </div>
 </div>
 <br>
-<h5 class="card-header">Featured Posts</h5>
+<h5 class="card-header">Featured Post</h5>
 @if ($flash = session('status'))
   <div id="flash-message" class="alert alert-success" role="alert">
     {{ $flash }}
@@ -30,7 +26,7 @@
 <div class="row">
   <div class="row">
     <div class="col">
-      <h3><strong>{{ $post->title }}</strong></h3>
+      <h3 id="featured"><strong>{{ $post->title }}</strong></h3>
     </div>
   </div>
 <div class="container">
@@ -60,7 +56,7 @@
 </div>
 </div>
 @endforeach
-  <div class="row justify-content-center">
+  <div class="row justify-content-center" href="#featured">
     {{ $posts->links() }}
   </div>
 </div>

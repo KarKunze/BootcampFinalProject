@@ -54,7 +54,8 @@ class PostsController extends Controller
         $validatedData=$request->validate([
             'title' => 'required|max:256',
             'category_id' => 'required',
-            'body' => 'required|max:1000'
+            'body' => 'required|max:1000',
+            'image' => 'max:20000'
         ]);
 
         $categories = \App\Category::all();
@@ -66,18 +67,12 @@ class PostsController extends Controller
           $post->image = $path;
         }
 
-        // $image = $request->file('image');
-        // $path = \Storage::putFile('images', $image);
-
         $categories = \App\Category::all();
-
-        // $post = new \App\Post;
         $post->title = $request->input('title');
         $post->category_id = $request->input('category_id');
         $post->tag = $request->input('tag');
         $post->body = $request->input('body');
         // $post->image = $path;
-
         $post->creator_id = \Auth::user()->id;
         $post->save();
         $request->session()->flash('status', 'Post created!');
@@ -133,7 +128,8 @@ class PostsController extends Controller
         $validatedData = $request->validate([
           'title' => 'required|max:256',
           'category_id' => 'required',
-          'body' => 'required|max:1000'
+          'body' => 'required|max:1000',
+          'image' => 'max:20000'
         ]);
         $category = \App\Category::all();
 
