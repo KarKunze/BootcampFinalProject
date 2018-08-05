@@ -10411,6 +10411,14 @@ a.text-dark:focus {
   }
 }
 
+.img {
+  max-width: 100%;
+}
+
+#postcard {
+  margin-bottom: 10px;
+}
+
 a.carousel-control-prev {
   margin-left: -10%;
   color: #000080;
@@ -10472,12 +10480,64 @@ p {
   font-size: 16px;
 }
 
-.jumbotron {
+#art.jumbotron {
   background-color: #0059b2;
-  background-image: url("/storage/skyline.jpg");
+  background-image: url("/storage/panmural.jpg");
   background-size: cover;
+  background-position: center;
   color: #e5eef7;
   margin-bottom: 5px;
+  text-shadow: 2px 2px #000000;
+}
+
+#eat.jumbotron {
+  background-color: #0059b2;
+  background-image: url("/storage/artsplace2.jpg");
+  background-size: cover;
+  background-position: center bottom;
+  color: #e5eef7;
+  margin-bottom: 5px;
+  text-shadow: 2px 2px #000000;
+}
+
+#moody.jumbotron {
+  background-color: #0059b2;
+  background-image: url("/storage/thorobredpark.jpg");
+  background-size: cover;
+  background-position: center;
+  color: #e5eef7;
+  margin-bottom: 5px;
+  text-shadow: 2px 2px #000000;
+}
+
+#local.jumbotron {
+  background-color: #0059b2;
+  background-image: url("/storage/skycrane.jpg");
+  background-size: cover;
+  background-position: center;
+  color: #e5eef7;
+  margin-bottom: 5px;
+  text-shadow: 2px 2px #000000;
+}
+
+#music.jumbotron {
+  background-color: #0059b2;
+  background-image: url("/storage/louis.jpg");
+  background-size: cover;
+  background-position: center;
+  color: #e5eef7;
+  margin-bottom: 5px;
+  text-shadow: 2px 2px #000000;
+}
+
+#places.jumbotron {
+  background-color: #0059b2;
+  background-image: url("/storage/sculpture.jpg");
+  background-size: cover;
+  background-position: center;
+  color: #e5eef7;
+  margin-bottom: 5px;
+  text-shadow: 2px 2px #000000;
 }
 
 .display-2 {
@@ -10556,12 +10616,22 @@ h3 {
   }
 }
 
-#postcard {
-  padding: 20px;
+#moodycard {
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-top: 20px;
+}
+
+#paginate {
+  padding-bottom: 20px;
 }
 
 #post-footer {
   margin-top: 5px;
+}
+
+#square {
+  border-radius: 0;
 }
 
 .createPost {
@@ -10569,8 +10639,15 @@ h3 {
 }
 
 .menu-image {
+  margin-left: 5px;
   vertical-align: middle;
   float: right;
+  border-style: none;
+}
+
+.menu-image2 {
+  vertical-align: middle;
+  float: left;
   border-style: none;
 }
 

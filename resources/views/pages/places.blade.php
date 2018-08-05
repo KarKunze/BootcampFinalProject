@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@section('page-id', ('places'))
+
 @section('page-title', ('Places to Go in the City'))
 
 @section('content')

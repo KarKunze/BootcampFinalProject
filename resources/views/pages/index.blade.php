@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@section('page-id', ('moody'))
+
 @section('page-title', ('Moody in the City'))
 
 @section('content')
@@ -7,7 +9,7 @@
 <div class="container-fluid">
   <div class="row">
       <div class="col-md-8">
-        <div class="card" id="postcard" style="margin-bottom: 10px;">
+        <div class="card" id="postcard">
           @include('posts.moody')
         </div>
       </div>

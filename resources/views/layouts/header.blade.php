@@ -84,7 +84,7 @@
         </nav>
 
         <div class="container-fluid">
-          <div class="jumbotron jumbotron-fluid">
+          <div class="jumbotron jumbotron-fluid" id="@yield('page-id')">
           <div class="container">
             <h1 class="display-2">@yield('page-title')</h1>
             <h2 class="lead">Your unofficial guide to Lexington, Fayette County, and beyond.</h2>
