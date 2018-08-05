@@ -8,7 +8,7 @@
   <div class="row">
       <div class="col-md-8">
         <div class="card" id="postcard">
-          placeholder
+          @include('posts.moody')
         </div>
       </div>
       <div class="col-md-4">

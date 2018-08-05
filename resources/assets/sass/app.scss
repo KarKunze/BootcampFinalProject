@@ -8,6 +8,17 @@
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 
+a.carousel-control-prev {
+  margin-left: -10%;
+  color: #000080;
+  // background-image:
+}
+
+a.carousel-control-next {
+  color: #000080;
+  margin-right: -10%;
+}
+
 #post-footer {
   border-bottom: 1px solid #ccc;
 }
@@ -35,6 +46,7 @@ a.navbar-brand {
 a:hover {
     color: #000080 !important;
 }
+
 
 .post-image {
   height: auto;

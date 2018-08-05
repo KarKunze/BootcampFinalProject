@@ -10411,6 +10411,16 @@ a.text-dark:focus {
   }
 }
 
+a.carousel-control-prev {
+  margin-left: -10%;
+  color: #000080;
+}
+
+a.carousel-control-next {
+  color: #000080;
+  margin-right: -10%;
+}
+
 #post-footer {
   border-bottom: 1px solid #ccc;
 }
