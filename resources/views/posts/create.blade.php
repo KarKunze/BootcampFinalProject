@@ -53,6 +53,7 @@
               <ul>
                 @foreach ($errors->all() as $error)
                   <li>{{ $error }}</li>
+                  <li>Please limit image uploads to 2 MB.</li>
                 @endforeach
               </ul>
             </div>

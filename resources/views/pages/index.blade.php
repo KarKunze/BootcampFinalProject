@@ -7,7 +7,7 @@
 <div class="container-fluid">
   <div class="row">
       <div class="col-md-8">
-        <div class="card" id="postcard">
+        <div class="card" id="postcard" style="margin-bottom: 10px;">
           @include('posts.moody')
         </div>
       </div>

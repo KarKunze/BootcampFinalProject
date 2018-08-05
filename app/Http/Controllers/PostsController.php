@@ -55,7 +55,7 @@ class PostsController extends Controller
             'title' => 'required|max:256',
             'category_id' => 'required',
             'body' => 'required|max:1000',
-            'image' => 'max:20000'
+            'image' => 'max:20000|mimes:png,jpeg,bmp,webp'
         ]);
 
         $categories = \App\Category::all();

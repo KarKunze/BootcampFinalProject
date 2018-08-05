@@ -20,10 +20,10 @@
                     <ul class="navbar-nav ml-auto">
                       <li>
                         <form class="form-inline ml-auto">
-              <div class="md-form my-0">
+              <!-- <div class="md-form my-0">
                   <input class="form-control-xs" type="text" placeholder="Search" aria-label="Search">
               </div>
-              <button href="#" class="btn-sm btn-light my-0 ml-sm-0" type="submit"><i class="fas fa-search"></i></button>
+              <button href="#" class="btn-sm btn-light my-0 ml-sm-0" type="submit"><i class="fas fa-search"></i></button> -->
           </form>
                       </li>
                         @guest
@@ -73,10 +73,10 @@
                     <a class="nav-link" href='/local'><strong>Local</strong></a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#"><i class="fab fa-youtube"></i></a>
+                    <a class="nav-link" href="https://www.youtube.com/channel/UCMp2x6RvhyMFnqhBJ575vUQ"><i class="fab fa-youtube"></i></a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#"><i class="fab fa-facebook-square"></i></i></a>
+                    <a class="nav-link" href="https://www.facebook.com/Moody-in-the-City-1798618350225204/"><i class="fab fa-facebook-square"></i></i></a>
                   </li>
                 </ul>
                 </div>

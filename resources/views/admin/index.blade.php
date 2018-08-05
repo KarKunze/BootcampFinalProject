@@ -43,7 +43,7 @@
         <div class="card">
 
             <table class="table table-bordered">
-              <thead>
+              <thead id="allPosts">
                 <tr>
                   <th scope="col">status</th>
                   <th scope="col">id</th>
@@ -81,7 +81,7 @@
                 </tr>
               </tbody>
             </table>
-
+{{ $posts->fragment('allPosts')->links() }}
         </div>
     </div>
     </div>
