@@ -15,7 +15,7 @@
 
       </div>
         <div class="col-lg-4">
-          <div class="card">
+          <div >
           @include('layouts.sidecolumn')
           </div>
         </div>

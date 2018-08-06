@@ -72,7 +72,7 @@ class PostsController extends Controller
         $post->status = 0;
         $post->creator_id = \Auth::user()->id;
         $post->save();
-        $request->session()->flash('status', 'Post created!');
+        $request->session()->flash('status', 'Post created! Please allow up to 24 hours for post to appear.');
         return redirect()->route('posts.create');
     }
 
