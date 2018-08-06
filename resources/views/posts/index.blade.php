@@ -13,7 +13,7 @@
   </div>
 <div class="container">
   <div class="row">
-    <div class="col-md-5">
+    <div class="col-lg-5">
       <div class="text-center">
         @if ($post->image)
         <img class="mx-auto d-block post-image" src="{{ asset("storage/$post->image") }}" alt="">
@@ -22,7 +22,7 @@
         @endif
       </div>
     </div>
-    <div class="col-md">{{ $post->body }}</div>
+    <div class="col-lg-5">{{ $post->body }}</div>
   </div>
 
   <div class="row" id="post-footer">
