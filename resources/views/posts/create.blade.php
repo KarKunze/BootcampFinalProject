@@ -2,6 +2,8 @@
 
 @section('page-title', ('Moody in the City'))
 
+@section('page-id', ('create'))
+
 @section ('content')
 
 <div class="container">
@@ -20,7 +22,7 @@
         @method('POST')
         <div class="form-group">
           <label for="exampleFormControlInput">Title</label>
-          <input type="text" class="form-control" id="FormControlInput" name="title" required>
+          <input type="text" class="form-control" id="FormControlInput" name="title" required value="{{ old('title') }}">
         </div>
         <div class="form-group">
           <label for="FormControlSelect">Category</label>
@@ -33,10 +35,10 @@
         </div>
         <div class="form-group">
           <label for="FormControlTextarea">Share your experience</label>
-          <textarea class="form-control" id="body" name="body" rows="8" maxlength="970" required></textarea>
+          <textarea class="form-control" id="body" name="body" rows="8" maxlength="970" required>{{ old('body') }}</textarea>
         </div>
         <div class="form-group">
-          <label for="FormControlFile">Add image</label>
+          <label for="FormControlFile">Add image (optional, 2MB or less)</label>
           <input type="file" class="form-control-file" id="FormControlFile" name="image">
         </div>
         <!-- <div class="form-group">
@@ -53,6 +55,7 @@
               <ul>
                 @foreach ($errors->all() as $error)
                   <li>{{ $error }}</li>
+                  <li>Please limit image uploads to 2 MB.</li>
                 @endforeach
               </ul>
             </div>

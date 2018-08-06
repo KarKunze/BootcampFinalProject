@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@section('page-id', ('music'))
+
 @section('page-title', ('Music in the City'))
 
 @section('content')

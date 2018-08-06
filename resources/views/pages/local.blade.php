@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@section('page-id', ('local'))
+
 @section('page-title', ('Local Businesses in the City'))
 
 @section('content')

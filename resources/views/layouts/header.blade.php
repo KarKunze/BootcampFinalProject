@@ -2,8 +2,8 @@
 
         <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
             <div class="container-fluid">
-              <a href="index.html" class="navbar-left"><img src="/storage/walkinghorse.png" height="80" width="90"></a>
-                <a class="navbar-brand" href="{{ url('/index') }}">
+              <a href="/" class="navbar-left"><img src="/storage/walkinghorse.png" height="80" width="90"></a>
+                <a class="navbar-brand" href="{{ url('/') }}">
                     Moody in the City
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
@@ -20,10 +20,10 @@
                     <ul class="navbar-nav ml-auto">
                       <li>
                         <form class="form-inline ml-auto">
-              <div class="md-form my-0">
+              <!-- <div class="md-form my-0">
                   <input class="form-control-xs" type="text" placeholder="Search" aria-label="Search">
               </div>
-              <button href="#" class="btn-sm btn-light my-0 ml-sm-0" type="submit"><i class="fas fa-search"></i></button>
+              <button href="#" class="btn-sm btn-light my-0 ml-sm-0" type="submit"><i class="fas fa-search"></i></button> -->
           </form>
                       </li>
                         @guest
@@ -73,10 +73,10 @@
                     <a class="nav-link" href='/local'><strong>Local</strong></a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#"><i class="fab fa-youtube"></i></a>
+                    <a class="nav-link" href="https://www.youtube.com/channel/UCMp2x6RvhyMFnqhBJ575vUQ"><i class="fab fa-youtube"></i></a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#"><i class="fab fa-facebook-square"></i></i></a>
+                    <a class="nav-link" href="https://www.facebook.com/Moody-in-the-City-1798618350225204/"><i class="fab fa-facebook-square"></i></i></a>
                   </li>
                 </ul>
                 </div>
@@ -84,7 +84,7 @@
         </nav>
 
         <div class="container-fluid">
-          <div class="jumbotron jumbotron-fluid">
+          <div class="jumbotron jumbotron-fluid" id="@yield('page-id')">
           <div class="container">
             <h1 class="display-2">@yield('page-title')</h1>
             <h2 class="lead">Your unofficial guide to Lexington, Fayette County, and beyond.</h2>

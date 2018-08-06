@@ -2,6 +2,8 @@
 
 @section('page-title', ('Moody in the City'))
 
+@section('page-id', ('edit'))
+
 @section ('content')
 @if ($flash = session('status'))
   <div id="flash-message" class="alert alert-success" role="alert">
@@ -49,6 +51,7 @@
               <ul>
                 @foreach ($errors->all() as $error)
                   <li>{{ $error }}</li>
+                  <li>Please limit image uploads to 2 MB.</li>
                 @endforeach
               </ul>
             </div>

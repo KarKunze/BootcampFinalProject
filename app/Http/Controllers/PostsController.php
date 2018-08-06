@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class PostsController extends Controller
 {
@@ -18,12 +19,8 @@ class PostsController extends Controller
      */
     public function index()
     {
-
-
-      if ($post->status == true){
         $posts = \App\Post::all();
         return view('posts.index', compact('posts'));
-      }
 
     }
 
@@ -54,26 +51,25 @@ class PostsController extends Controller
         $validatedData=$request->validate([
             'title' => 'required|max:256',
             'category_id' => 'required',
-            'body' => 'required|max:1000'
+            'body' => 'required|max:1000',
+            'image' => 'max:20000|mimes:png,jpeg,bmp,webp'
         ]);
-
-        // if ($image = $request->file('image')) {
-        //   $path = \Storage::putFile('images', $image);
-        //   $post->image = $path;
-        // }
-
-        $image = $request->file('image');
-        $path = \Storage::putFile('images', $image);
 
         $categories = \App\Category::all();
 
         $post = new \App\Post;
+
+        if ($image = $request->file('image')) {
+          $path = \Storage::putFile('images', $image);
+          $post->image = $path;
+        }
+
+        $categories = \App\Category::all();
+
         $post->title = $request->input('title');
         $post->category_id = $request->input('category_id');
-        $post->tag = $request->input('tag');
         $post->body = $request->input('body');
-        // $post->status = 1;
-        $post->image = $path;
+        $post->status = 0;
         $post->creator_id = \Auth::user()->id;
         $post->save();
         $request->session()->flash('status', 'Post created!');
@@ -88,8 +84,8 @@ class PostsController extends Controller
      */
     // public function show($id)
     // {
-    //
-    //     return view('posts.show', compact('posts'));
+    //     $posts = \App\Post::all();
+    //     return view('posts.index', compact('posts'));
     // }
 
     /**
@@ -108,7 +104,7 @@ class PostsController extends Controller
       }
       else
       {
-          return redirect()->route('index');
+          return redirect()->route('/');
       }
 
     }
@@ -129,21 +125,22 @@ class PostsController extends Controller
         $validatedData = $request->validate([
           'title' => 'required|max:256',
           'category_id' => 'required',
-          'body' => 'required|max:1000'
+          'body' => 'required|max:1000',
+          'image' => 'max:20000|mimes:png,jpeg,bmp,webp'
         ]);
         $category = \App\Category::all();
 
-        if ($image = $request->file('image')) {
-          $path = \Storage::putFile('images', $image);
-          $post->image = $path;
-        }
+
 
         $post = \App\Post::find($id);
         $post->title = $request->input('title');
         $post->category_id = $request->input('category_id');
         $post->tag = $request->input('tag');
-        // $post->status = 1;
-        $post->image = $path;
+        $post->status = 0;
+        if ($image = $request->file('image')) {
+          $path = \Storage::putFile('images', $image);
+          $post->image = $path;
+        }
         $post->body = $request->input('body');
 
 
@@ -166,13 +163,45 @@ class PostsController extends Controller
 
       if (\Auth::user()->role_id == 1 || $post->creator_id == \Auth::user()->id) {
 
+        if ($image = $post->image) {
+          $path = \Storage::delete('storage/images', $image);
+        }
         $post->delete();
+
+        // Storage::delete('file.jpg');
+
+
 
         return redirect()->route($post->category_page());
 
     } else {
             // $request->session()->flash('status', 'You don\'t have permission to delete this post.');
-            return redirect()->route('index');
+            return redirect()->route('/');
         }
     }
+
+
+    // this function is to allow admins to approve posts before publishing
+
+    public function approvePost(Request $request, $post_id)
+    {
+      if (\Auth::user()->role_id == 1) {
+        $post = \App\Post::find($post_id);
+        $post->status = 1;
+        $post->save();
+      }
+    }
+
+    public function unapprovePost(Request $request, $post_id)
+    {
+      if (\Auth::user()->role_id == 1) {
+        $post = \App\Post::find($post_id);
+        $post->status = 0;
+        $post->save();
+      }
+    }
+
+
+
+
 }
