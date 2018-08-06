@@ -20,7 +20,7 @@
         @method('POST')
         <div class="form-group">
           <label for="exampleFormControlInput">Title</label>
-          <input type="text" class="form-control" id="FormControlInput" name="title" required>
+          <input type="text" class="form-control" id="FormControlInput" name="title" required value="{{ old('title') }}">
         </div>
         <div class="form-group">
           <label for="FormControlSelect">Category</label>
@@ -33,10 +33,10 @@
         </div>
         <div class="form-group">
           <label for="FormControlTextarea">Share your experience</label>
-          <textarea class="form-control" id="body" name="body" rows="8" maxlength="970" required></textarea>
+          <textarea class="form-control" id="body" name="body" rows="8" maxlength="970" required>{{ old('body') }}</textarea>
         </div>
         <div class="form-group">
-          <label for="FormControlFile">Add image</label>
+          <label for="FormControlFile">Add image (optional, 2MB or less)</label>
           <input type="file" class="form-control-file" id="FormControlFile" name="image">
         </div>
         <!-- <div class="form-group">

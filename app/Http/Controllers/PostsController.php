@@ -68,11 +68,13 @@ class PostsController extends Controller
         }
 
         $categories = \App\Category::all();
+
         $post->title = $request->input('title');
         $post->category_id = $request->input('category_id');
-        $post->tag = $request->input('tag');
+        // $post->tag = $request->input('tag');
         $post->body = $request->input('body');
-        // $post->image = $path;
+
+
         $post->creator_id = \Auth::user()->id;
         $post->save();
         $request->session()->flash('status', 'Post created!');

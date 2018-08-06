@@ -17,6 +17,9 @@
   margin-bottom: 10px;
 }
 
+input {
+  border-radius: 25px;
+}
 
 a.carousel-control-prev {
   margin-left: -10%;
@@ -83,19 +86,20 @@ p {
   // font-size: 16px;
 }
 
-#art.jumbotron {
-  // background-color: #cecece;
+.jumbotron {
   background-color: #0059b2;
-  background-image: url("/storage/panmural.jpg");
-  background-size: cover;
-  background-position: center;
   color: #e5eef7;
   margin-bottom: 5px;
   text-shadow: 2px 2px #000000;
 }
 
+#art.jumbotron {
+  background-image: url("/storage/panmural.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
 #eat.jumbotron {
-  // background-color: #cecece;
   background-color: #0059b2;
   background-image: url("/storage/artsplace2.jpg");
   background-size: cover;
@@ -106,7 +110,6 @@ p {
 }
 
 #moody.jumbotron {
-  // background-color: #cecece;
   background-color: #0059b2;
   background-image: url("/storage/thorobredpark.jpg");
   background-size: cover;
@@ -117,7 +120,6 @@ p {
 }
 
 #local.jumbotron {
-  // background-color: #cecece;
   background-color: #0059b2;
   background-image: url("/storage/skycrane.jpg");
   background-size: cover;
@@ -128,7 +130,6 @@ p {
 }
 
 #music.jumbotron {
-  // background-color: #cecece;
   background-color: #0059b2;
   background-image: url("/storage/louis.jpg");
   background-size: cover;
@@ -139,7 +140,6 @@ p {
 }
 
 #places.jumbotron {
-  // background-color: #cecece;
   background-color: #0059b2;
   background-image: url("/storage/sculpture.jpg");
   background-size: cover;
