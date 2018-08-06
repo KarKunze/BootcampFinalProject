@@ -2,6 +2,8 @@
 
 @section('page-title', ('Moody in the City'))
 
+@section('page-id', ('edit'))
+
 @section ('content')
 @if ($flash = session('status'))
   <div id="flash-message" class="alert alert-success" role="alert">

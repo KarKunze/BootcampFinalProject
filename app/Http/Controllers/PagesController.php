@@ -10,6 +10,8 @@ class PagesController extends Controller {
   //     $this->middleware('auth');
   // }
 
+
+
     public function getIndex() {
       // process variable data or params
       // talk to the model
@@ -33,29 +35,30 @@ class PagesController extends Controller {
     }
 
     public function getArt() {
-        $posts = \App\Post::latest()->where ('category_id', '=', '1')->paginate(5);
+        $posts = \App\Post::latest()->where ('status', '=', 'true')->where ('category_id', '=', '1')->paginate(5);
         return view('pages.art', compact('posts'));
     }
 
     public function getMusic() {
-        $posts = \App\Post::latest()->where ('category_id', '=', '2')->paginate(5);
+        $posts = \App\Post::latest()->where ('status', '=', 'true')->where ('category_id', '=', '2')->paginate(5);
         return view('pages.music', compact('posts'));
     }
 
     public function getPlaces() {
-        $posts = \App\Post::latest()->where ('category_id', '=', '3')->paginate(5);
+        $posts = \App\Post::latest()->where ('status', '=', 'true')->where ('category_id', '=', '3')->paginate(5);
         return view('pages.places', compact('posts'));
     }
 
     public function getLocal() {
-        $posts = \App\Post::latest()->where ('category_id', '=', '5')->paginate(5);
+        $posts = \App\Post::latest()->where ('status', '=', 'true')->where ('category_id', '=', '5')->paginate(5);
         return view('pages.local', compact('posts'));
     }
 
     public function getEatdrink() {
-        $posts = \App\Post::latest()->where ('category_id', '=', '4')->paginate(5);
+        $posts = \App\Post::latest()->where ('status', '=', 'true')->where ('category_id', '=', '4')->paginate(5);
         return view('pages.eatdrink', compact('posts'));
     }
+
 
     public function getCreate() {
         $categories = \App\Category::all();
@@ -66,7 +69,6 @@ class PagesController extends Controller {
         $posts = \App\Post::all();
         return view('posts.edit');
     }
-
 
 
 

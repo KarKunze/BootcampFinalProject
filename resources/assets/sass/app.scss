@@ -100,53 +100,45 @@ p {
 }
 
 #eat.jumbotron {
-  background-color: #0059b2;
   background-image: url("/storage/artsplace2.jpg");
   background-size: cover;
   background-position: center bottom;
-  color: #e5eef7;
-  margin-bottom: 5px;
-  text-shadow: 2px 2px #000000;
 }
 
 #moody.jumbotron {
-  background-color: #0059b2;
   background-image: url("/storage/thorobredpark.jpg");
   background-size: cover;
   background-position: center;
-  color: #e5eef7;
-  margin-bottom: 5px;
-  text-shadow: 2px 2px #000000;
 }
 
 #local.jumbotron {
-  background-color: #0059b2;
   background-image: url("/storage/skycrane.jpg");
   background-size: cover;
   background-position: center;
-  color: #e5eef7;
-  margin-bottom: 5px;
-  text-shadow: 2px 2px #000000;
 }
 
 #music.jumbotron {
-  background-color: #0059b2;
   background-image: url("/storage/louis.jpg");
   background-size: cover;
   background-position: center;
-  color: #e5eef7;
-  margin-bottom: 5px;
-  text-shadow: 2px 2px #000000;
 }
 
 #places.jumbotron {
-  background-color: #0059b2;
   background-image: url("/storage/sculpture.jpg");
   background-size: cover;
   background-position: center;
-  color: #e5eef7;
-  margin-bottom: 5px;
-  text-shadow: 2px 2px #000000;
+}
+
+#create.jumbotron {
+  background-image: url("/storage/banks.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+#edit.jumbotron {
+  background-image: url("/storage/parkinglot.jpg");
+  background-size: cover;
+  background-position: center;
 }
 
 .display-2 {

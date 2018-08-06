@@ -3,12 +3,40 @@
 @section('page-title', ('Admin'))
 
 @section ('content')
-<div class="container">
+
+<script type="text/javascript">
+
+    function handleApproval(id) {
+
+      let status = document.getElementById('status' + id);
+
+      if (status.checked) {
+        axios.post('/approve/' + id)
+        .catch(function (error) {
+          console.log('error');
+        });
+      }
+      else {
+        axios.post('/unapprove/' + id)
+        .catch(function (error) {
+          console.log('console error');
+        });
+      }
+    }
+
+</script>
+
+
+<!-- // admin approve/unapprove script above
+// admin blade below -->
+
+
+<div class="container-fluid">
   <h3 class="text-center"> Admin Panel </h3>
   <br>
   <div class="row">
     <div class="col">
-      <div class="card">
+      <div class="card admin">
 
         <table class="table table-bordered">
           <thead>
@@ -40,7 +68,7 @@
           <a class="btn-sm btn-secondary mt-2" href='/index' role="button">Home</a>
         </div>
       @endif
-        <div class="card">
+        <div class="card admin">
 
             <table class="table table-bordered">
               <thead id="allPosts">
@@ -53,20 +81,21 @@
                   <th scope="col">category</th>
                   <th scope="col">body</th>
                   <th scope="col">image</th>
+                  <th scope="col">delete</th>
                 </tr>
               </thead>
               <tbody>
                   @foreach ($posts as $post)
                   <tr>
                   <td>
-                    <form method="post" action="/admin/{{ $post->status }}">
+                    <form method="post" action="/posts/{{ $post->id }}">
                       		@csrf
                       		@method('PATCH')
                         <div class="form-check form-check">
-                        <input class="form-check-input" type="checkbox" id="status" name="status" {{ $post->status ? 'checked' : '' }}>
+                        <input class="form-check-input" type="checkbox" onclick="handleApproval({{ $post->id }})" id="status{{ $post->id }}" name="status" {{ $post->status ? 'checked' : '' }}>
                         <label class="form-check-label" for="status">Approved</label>
                         </div>
-                        <button class="btn-sm btn-outline-primary" type="submit">Save</button>
+                        <!-- <button class="btn-sm btn-outline-primary" type="submit">Save</button> -->
                     </form>
                   </td>
                   <td>{{ $post->id }}</td>
@@ -76,6 +105,13 @@
                   <td>{{ $post->category_name() }}</td>
                   <td>{{ $post->body }}</td>
                   <td><img class="mx-auto d-block post-image" src="{{ asset("storage/$post->image") }}" alt=""></td>
+                  <td>
+                    <form action="/posts/{{ $post->id }}" method="post">
+                      @method('DELETE')
+                      @csrf
+                      <button class="btn-sm btn-outline-danger ml-3" type="submit">delete</button></p>
+                    </form>
+                  </td>
                   </form>
                   @endforeach
                 </tr>

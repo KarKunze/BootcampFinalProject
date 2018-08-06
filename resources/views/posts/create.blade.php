@@ -2,6 +2,8 @@
 
 @section('page-title', ('Moody in the City'))
 
+@section('page-id', ('create'))
+
 @section ('content')
 
 <div class="container">

@@ -2,8 +2,8 @@
 
         <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
             <div class="container-fluid">
-              <a href="index.html" class="navbar-left"><img src="/storage/walkinghorse.png" height="80" width="90"></a>
-                <a class="navbar-brand" href="{{ url('/index') }}">
+              <a href="/" class="navbar-left"><img src="/storage/walkinghorse.png" height="80" width="90"></a>
+                <a class="navbar-brand" href="{{ url('/') }}">
                     Moody in the City
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
