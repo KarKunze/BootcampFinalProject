@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Http\File;
 use Illuminate\Support\Facades\Storage;
 
 class PostsController extends Controller
@@ -60,7 +61,7 @@ class PostsController extends Controller
         $post = new \App\Post;
 
         if ($image = $request->file('image')) {
-          $path = \Storage::putFile('images', $image);
+          $path = Storage::disk('s3')->putFile('images', $image, 'public');
           $post->image = $path;
         }
 
@@ -136,7 +137,7 @@ class PostsController extends Controller
         $post->tag = $request->input('tag');
         $post->status = 0;
         if ($image = $request->file('image')) {
-          $path = \Storage::putFile('images', $image);
+          $path = Storage::disk('s3')->putFile('images', $image, 'public');
           $post->image = $path;
         }
         $post->body = $request->input('body');
@@ -162,7 +163,7 @@ class PostsController extends Controller
       if (\Auth::user()->role_id == 1 || $post->creator_id == \Auth::user()->id) {
 
         if ($image = $post->image) {
-          $path = \Storage::delete('storage/images', $image);
+          $path = Storage::disk('s3')->delete('images', $image);
         }
         $post->delete();
 
