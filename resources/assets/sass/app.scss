@@ -1,6 +1,6 @@
 
 // Fonts
-@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro|Spectral");
 
 // Variables
 @import "variables";
@@ -8,7 +8,258 @@
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 
+
+.img {
+      max-width: 100%;
+    }
+
+#postcard {
+  margin-bottom: 10px;
+}
+
+input {
+  border-radius: 25px;
+}
+
+a.carousel-control-prev {
+  margin-left: -10%;
+  color: #000080;
+  // background-image:
+}
+
+a.carousel-control-next {
+  color: #000080;
+  margin-right: -10%;
+}
+
+#post-footer {
+  border-bottom: 1px solid #ccc;
+}
+
 .navbar-laravel {
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+
+.navbar {
+  font-family: 'Spectral', serif;
+  margin-bottom: 10px;
+}
+
+a.navbar-brand {
+  margin-left: 3px;
+  font-size: 40px;
+}
+
+.navbar-light .navbar-brand {
+    color: #0059b2;
+    // color: #000080;
+}
+
+a:hover {
+    color: #000080 !important;
+}
+
+
+.post-image {
+  height: auto;
+  width: auto;
+  max-width: 300px;
+  max-height: 300px;
+  margin-bottom: 10px;
+}
+
+.pagination {
+  margin-top: 20px;
+  margin-bottom: 0;
+}
+
+.list-group-item {
+  font-family: 'Spectral', sans-serif;
+  font-size: 20px;
+}
+
+p {
+  font-family: 'Spectral', sans-serif;
+  font-size: 16px;
+  // font-family: 'Source Sans Pro', sans-serif;
+  // font-size: 16px;
+}
+
+.jumbotron {
+  background-color: #0059b2;
+  color: #e5eef7;
+  margin-bottom: 5px;
+  text-shadow: 2px 2px #000000;
+}
+
+#art.jumbotron {
+  background-image: url("/storage/panmural.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+#eat.jumbotron {
+  background-image: url("/storage/artsplace2.jpg");
+  background-size: cover;
+  background-position: center bottom;
+}
+
+#moody.jumbotron {
+  background-image: url("/storage/thorobredpark.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+#local.jumbotron {
+  background-image: url("/storage/skycrane.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+#music.jumbotron {
+  background-image: url("/storage/louis.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+#places.jumbotron {
+  background-image: url("/storage/sculpture.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+#create.jumbotron {
+  background-image: url("/storage/banks.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+#edit.jumbotron {
+  background-image: url("/storage/parkinglot.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.display-2 {
+  font-family: 'Spectral', serif;
+  font-size: 50px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.lead {
+  font-family: 'Spectral', serif;
+  font-size: 30px;
+  text-align: center;
+}
+
+.card-header {
+  font-family: 'Spectral', serif;
+  font-size: 20px;
+  background-color: #0059b2;
+  color: #e5eef7;
+}
+
+.card-body {
+  background-color: #e5eef7;
+  // padding-left: 5px;
+}
+
+.card {
+  margin-bottom: 10px;
+}
+
+#fb {
+  background-color: #0059b2;
+  text-align: center;
+  overflow: hidden;
+  padding: 5px;
+}
+
+h3 {
+  font-family: 'Spectral', serif;
+  font-size: 24px;
+  color: #0059b2;
+  padding-top: 3px;
+}
+
+#flashMessage {
+  font-family: 'Spectral', serif;
+  font-size: 18px;
+  text-align: center;
+}
+
+#flash-message {
+    font-family: 'Spectral', serif;
+    font-size: 18px;
+    text-align: center;
+    top: 20px;
+    position: absolute;
+    right: 20px;
+    z-index: 10;
+    animation: flash-message 4s forwards;
+}
+
+@keyframes flash-message {
+    0%   {opacity: 1;}
+    100% {opacity: 0; display:none;}
+}
+
+#moodycard {
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-top: 20px;
+}
+
+#paginate {
+  padding-bottom: 20px;
+}
+
+#post-footer {
+  margin-top: 5px;
+}
+
+#square {
+  border-radius: 0;
+}
+
+.createPost {
+  font-family: 'Spectral', serif;
+}
+
+.menu-image {
+    margin-left: 5px;
+    vertical-align: middle;
+    float:right;
+    border-style: none;
+}
+.menu-image2 {
+    vertical-align: middle;
+    float:left;
+    border-style: none;
+}
+
+.nav-link {
+  
+}
+
+.responsiveCal {
+  position: relative;
+  padding-bottom: 75%;
+  margin-bottom: 5px;
+  height: 0;
+  overflow: hidden;
+  }
+
+.responsiveCal iframe {
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background-color: #cecece;
 }
