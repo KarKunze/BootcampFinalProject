@@ -8,6 +8,30 @@
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 
+
+.img {
+      max-width: 100%;
+    }
+
+#postcard {
+  margin-bottom: 10px;
+}
+
+input {
+  border-radius: 25px;
+}
+
+a.carousel-control-prev {
+  margin-left: -10%;
+  color: #000080;
+  // background-image:
+}
+
+a.carousel-control-next {
+  color: #000080;
+  margin-right: -10%;
+}
+
 #post-footer {
   border-bottom: 1px solid #ccc;
 }
@@ -36,12 +60,18 @@ a:hover {
     color: #000080 !important;
 }
 
+
 .post-image {
-    height: auto;
-    width: auto;
-    max-width: 300px;
-    max-height: 300px;
-    margin-bottom: 10px;
+  height: auto;
+  width: auto;
+  max-width: 300px;
+  max-height: 300px;
+  margin-bottom: 10px;
+}
+
+.pagination {
+  margin-top: 20px;
+  margin-bottom: 0;
 }
 
 .list-group-item {
@@ -57,12 +87,58 @@ p {
 }
 
 .jumbotron {
-  // background-color: #cecece;
   background-color: #0059b2;
-  background-image: url("/storage/skyline.jpg");
-  background-size: cover;
   color: #e5eef7;
   margin-bottom: 5px;
+  text-shadow: 2px 2px #000000;
+}
+
+#art.jumbotron {
+  background-image: url("/storage/panmural.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+#eat.jumbotron {
+  background-image: url("/storage/artsplace2.jpg");
+  background-size: cover;
+  background-position: center bottom;
+}
+
+#moody.jumbotron {
+  background-image: url("/storage/thorobredpark.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+#local.jumbotron {
+  background-image: url("/storage/skycrane.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+#music.jumbotron {
+  background-image: url("/storage/louis.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+#places.jumbotron {
+  background-image: url("/storage/sculpture.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+#create.jumbotron {
+  background-image: url("/storage/banks.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+#edit.jumbotron {
+  background-image: url("/storage/parkinglot.jpg");
+  background-size: cover;
+  background-position: center;
 }
 
 .display-2 {
@@ -88,6 +164,17 @@ p {
 .card-body {
   background-color: #e5eef7;
   // padding-left: 5px;
+}
+
+.card {
+  margin-bottom: 10px;
+}
+
+#fb {
+  background-color: #0059b2;
+  text-align: center;
+  overflow: hidden;
+  padding: 5px;
 }
 
 h3 {
@@ -119,13 +206,22 @@ h3 {
     100% {opacity: 0; display:none;}
 }
 
+#moodycard {
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-top: 20px;
+}
 
-#postcard {
-  padding: 20px;
+#paginate {
+  padding-bottom: 20px;
 }
 
 #post-footer {
   margin-top: 5px;
+}
+
+#square {
+  border-radius: 0;
 }
 
 .createPost {
@@ -133,9 +229,19 @@ h3 {
 }
 
 .menu-image {
+    margin-left: 5px;
     vertical-align: middle;
     float:right;
     border-style: none;
+}
+.menu-image2 {
+    vertical-align: middle;
+    float:left;
+    border-style: none;
+}
+
+.nav-link {
+  
 }
 
 .responsiveCal {

@@ -13,6 +13,25 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
+      DB::table('users')->insert([
+        'name' => 'Karla',
+        'email' => 'karlalkunze@gmail.com',
+        'password' => bcrypt('mysupersecretadminpassword51'),
+        'role_id' => 1,
+        'created_at' => Carbon::now(),
+        'updated_at' => Carbon::now()
+      ]);
+
+      DB::table('users')->insert([
+        'name' => 'Jerry',
+        'email' => 'moodyinthecity@gmail.com',
+        'password' => bcrypt('jerry1227'),
+        'role_id' => 1,
+        'created_at' => Carbon::now(),
+        'updated_at' => Carbon::now()
+      ]);
+
+
       $names = ['John', 'Ringo', 'Paul', 'George'];
 
         foreach ($names as $name) {
@@ -39,24 +58,6 @@ class DatabaseSeeder extends Seeder
             ]);
 
         }
-
-        DB::table('users')->insert([
-          'name' => 'Karla',
-          'email' => 'karlalkunze@gmail.com',
-          'password' => bcrypt('mysupersecretadminpassword51'),
-          'role_id' => 1,
-          'created_at' => Carbon::now(),
-          'updated_at' => Carbon::now()
-        ]);
-
-        DB::table('users')->insert([
-          'name' => 'Jerry',
-          'email' => 'moodyinthecity@gmail.com',
-          'password' => bcrypt('jerry1227'),
-          'role_id' => 1,
-          'created_at' => Carbon::now(),
-          'updated_at' => Carbon::now()
-        ]);
 
         DB::table('posts')->insert([
           'title' => 'test 1',

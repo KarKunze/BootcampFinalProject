@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@section('page-id', ('eat'))
+
 @section('page-title', ('Eat and Drink in the City'))
 
 @section('content')
@@ -11,8 +13,8 @@
           @include('posts.index')
         </div>
       </div>
-        <div class="col-md-4">
-          <div class="card">
+        <div class="col-lg-4">
+          <div>
           @include('layouts.sidecolumn')
           </div>
         </div>

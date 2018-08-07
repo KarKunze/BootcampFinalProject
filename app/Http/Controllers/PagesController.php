@@ -1,8 +1,16 @@
 <?php
 
 namespace App\Http\Controllers;
+use Illuminate\Http\Request;
 
 class PagesController extends Controller {
+
+  // public function __construct()
+  // {
+  //     $this->middleware('auth');
+  // }
+
+
 
     public function getIndex() {
       // process variable data or params
@@ -10,7 +18,8 @@ class PagesController extends Controller {
       // receive from the model
       // compile or process data from the model
       // pass that data to the correct view
-        return view('pages.index');
+        $posts = \App\Post::latest()->where ('creator_id', '=', '6')->paginate(1);
+        return view('pages.index', compact('posts'));
     }
 
     public function getAbout() {
@@ -26,29 +35,30 @@ class PagesController extends Controller {
     }
 
     public function getArt() {
-        $posts = \App\Post::latest()->where ('category_id', '=', '1')->get();
+        $posts = \App\Post::latest()->where ('status', '=', 'true')->where ('category_id', '=', '1')->paginate(5);
         return view('pages.art', compact('posts'));
     }
 
     public function getMusic() {
-        $posts = \App\Post::latest()->where ('category_id', '=', '2')->get();
+        $posts = \App\Post::latest()->where ('status', '=', 'true')->where ('category_id', '=', '2')->paginate(5);
         return view('pages.music', compact('posts'));
     }
 
     public function getPlaces() {
-        $posts = \App\Post::latest()->where ('category_id', '=', '3')->get();
+        $posts = \App\Post::latest()->where ('status', '=', 'true')->where ('category_id', '=', '3')->paginate(5);
         return view('pages.places', compact('posts'));
     }
 
     public function getLocal() {
-        $posts = \App\Post::latest()->where ('category_id', '=', '5')->get();
+        $posts = \App\Post::latest()->where ('status', '=', 'true')->where ('category_id', '=', '5')->paginate(5);
         return view('pages.local', compact('posts'));
     }
 
     public function getEatdrink() {
-        $posts = \App\Post::latest()->where ('category_id', '=', '4')->get();
+        $posts = \App\Post::latest()->where ('status', '=', 'true')->where ('category_id', '=', '4')->paginate(5);
         return view('pages.eatdrink', compact('posts'));
     }
+
 
     public function getCreate() {
         $categories = \App\Category::all();

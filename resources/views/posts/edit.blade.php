@@ -2,6 +2,8 @@
 
 @section('page-title', ('Moody in the City'))
 
+@section('page-id', ('edit'))
+
 @section ('content')
 @if ($flash = session('status'))
   <div id="flash-message" class="alert alert-success" role="alert">
@@ -30,17 +32,14 @@
             @endforeach
           </select>
         </div>
-        <!-- <div class="form-group">
-          <label for="FormControlInput">Tags</label>
-          <input type="text" class="form-control" data-role="tagsinput" id="tagPlaces" name="tagPlaces">
-        </div> -->
         <div class="form-group">
           <label for="FormControlTextarea">Edit your experience</label>
           <textarea class="form-control" id="body" name="body" rows="8" maxlength="970" value="{{ $post->body }}" required>{{ $post->body }}</textarea>
         </div>
         <div class="form-group">
+          <img class="mx-auto d-block post-image" src="{{ asset("storage/$post->image") }}" alt="">
           <label for="FormControlFile">Add image</label>
-          <input type="file" class="form-control-file" id="FormControlFile" name="image" value="{{ asset("storage/$post->image") }}">
+          <input type="file" class="form-control-file" id="FormControlFile" name="image">
         </div>
         <div class="form-group">
         <button type="submit" class="btn btn-light mt-3">Update</button>
@@ -52,6 +51,7 @@
               <ul>
                 @foreach ($errors->all() as $error)
                   <li>{{ $error }}</li>
+                  <li>Please limit image uploads to 2 MB.</li>
                 @endforeach
               </ul>
             </div>
