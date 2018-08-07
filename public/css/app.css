@@ -10563,9 +10563,15 @@ p {
   background-color: #e5eef7;
 }
 
+.card {
+  margin-bottom: 10px;
+}
+
 #fb {
   background-color: #0059b2;
   text-align: center;
+  overflow: hidden;
+  padding: 5px;
 }
 
 h3 {
