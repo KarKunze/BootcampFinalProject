@@ -130,8 +130,6 @@ class PostsController extends Controller
         ]);
         $category = \App\Category::all();
 
-
-
         $post = \App\Post::find($id);
         $post->title = $request->input('title');
         $post->category_id = $request->input('category_id');
