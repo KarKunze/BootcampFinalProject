@@ -20,7 +20,7 @@
 
 <!-- </div> -->
 
-<div class="card" style="margin-top: 20px;">
+<div class="card" style="margin-top: 5px;">
   <h5 class="card-header" id="square">Featured Video</h5>
     <div class="embed-responsive embed-responsive-16by9">
     <iframe width="400" height="300" src="https://www.youtube.com/embed/K1th6nSWA7E" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
@@ -28,7 +28,7 @@
 </div>
 
 
-<div class="card" style="margin-top: 20px;">
+<div class="card" style="border: 0">
 <h5 class="card-header" id="square">Featured Post</h5>
 <div class="container" style="margin-top: 5px;">
   @foreach ($posts as $post)

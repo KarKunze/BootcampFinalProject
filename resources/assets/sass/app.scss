@@ -166,10 +166,15 @@ p {
   // padding-left: 5px;
 }
 
+.card {
+  margin-bottom: 10px;
+}
+
 #fb {
   background-color: #0059b2;
   text-align: center;
-
+  overflow: hidden;
+  padding: 5px;
 }
 
 h3 {
@@ -233,6 +238,10 @@ h3 {
     vertical-align: middle;
     float:left;
     border-style: none;
+}
+
+.nav-link {
+  
 }
 
 .responsiveCal {
