@@ -16,7 +16,7 @@
     <div class="col-lg">
       <div class="text-center">
         @if ($post->image)
-        <img class="mx-auto d-block post-image" src="{{ asset("storage/$post->image") }}" alt="">
+        <img class="mx-auto d-block post-image" src="{{ secure_asset("https://s3.us-east-2.amazonaws.com/moodyinthecity/$post->image") }}" alt="">
         @else
         <img class="mx-auto d-block post-image" src="/storage/walkinghorse.png" alt="">
         @endif

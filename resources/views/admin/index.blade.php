@@ -104,7 +104,7 @@
                   <td>{{ $post->created_at }}</td>
                   <td>{{ $post->category_name() }}</td>
                   <td>{{ $post->body }}</td>
-                  <td><img class="mx-auto d-block post-image" src="{{ asset("storage/$post->image") }}" alt=""></td>
+                  <td><img class="mx-auto d-block post-image" src="{{ secure_asset("https://s3.us-east-2.amazonaws.com/moodyinthecity/$post->image") }}" alt=""></td>
                   <td>
                     <form action="/posts/{{ $post->id }}" method="post">
                       @method('DELETE')

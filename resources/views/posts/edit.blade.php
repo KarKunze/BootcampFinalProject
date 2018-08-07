@@ -9,7 +9,7 @@
   <div id="flash-message" class="alert alert-success" role="alert">
     {{ $flash }}
     <br>
-    <a class="btn-sm btn-secondary mt-2" href='/index' role="button">Home</a>
+    <a class="btn-sm btn-secondary mt-2" href='/' role="button">Home</a>
   </div>
 @endif
 <div class="container">
@@ -38,7 +38,7 @@
         </div>
         <div class="form-group">
           <img class="mx-auto d-block post-image" src="{{ asset("storage/$post->image") }}" alt="">
-          <label for="FormControlFile">Add image</label>
+          <label for="FormControlFile">Add image (optional, 2MB or less)</label>
           <input type="file" class="form-control-file" id="FormControlFile" name="image">
         </div>
         <div class="form-group">

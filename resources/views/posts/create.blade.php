@@ -11,7 +11,7 @@
     <div id="flashMessage" class="alert alert-success" role="alert">
       {{ $flash }}
       <br>
-      <a class="btn-sm btn-secondary mt-2" href='/index' role="button">Home</a>
+      <a class="btn-sm btn-secondary mt-2" href='/' role="button">Home</a>
     </div>
   @endif
   <div class="card createPost">
