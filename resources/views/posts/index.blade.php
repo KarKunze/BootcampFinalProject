@@ -11,9 +11,9 @@
       <h3 style="margin-left: 20px;"><strong>{{ $post->title }}</strong></h3>
     </div>
   </div>
-<div class="container">
+<div class="container-fluid">
   <div class="row">
-    <div class="col-md-5">
+    <div class="col-lg">
       <div class="text-center">
         @if ($post->image)
         <img class="mx-auto d-block post-image" src="{{ asset("storage/$post->image") }}" alt="">
@@ -22,12 +22,12 @@
         @endif
       </div>
     </div>
-    <div class="col-md">{{ $post->body }}</div>
+    <div class="col-lg">{{ $post->body }}</div>
   </div>
 
   <div class="row" id="post-footer">
-    <p style="margin-left: 20px;" id="postfooter-text"> by {{ $post->user_name() }} | {{ $post->created_at->toFormattedDateString() }} | <i class="fas fa-tags"></i> {{ $post->category_name() }} |  <i class="fa fa-thumbs-up" aria-hidden="true"></i> |
-      <button class="btn-sm btn-outline-primary ml-3"><a href= "/posts/{{ $post->id }}/edit">edit</a></button>
+    <p style="margin-left: 20px;" id="postfooter-text"> by {{ $post->user_name() }} | {{ $post->created_at->toFormattedDateString() }} | <i class="fas fa-tags"></i> {{ $post->category_name() }} |  </p>
+      <p><button class="btn-sm btn-outline-primary ml-3"><a href= "/posts/{{ $post->id }}/edit">edit</a></button>
       <form action="/posts/{{ $post->id }}" method="post">
         @method('DELETE')
         @csrf
@@ -42,3 +42,6 @@
     {{ $posts->links() }}
   </div>
 </div>
+
+
+<!-- <i class="fa fa-thumbs-up" aria-hidden="true"></i> |  -->

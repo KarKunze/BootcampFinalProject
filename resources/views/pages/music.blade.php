@@ -15,8 +15,8 @@
           @include('posts.index')
         </div>
       </div>
-        <div class="col-md-4">
-          <div class="card">
+        <div class="col-lg-4">
+          <div>
           @include('layouts.sidecolumn')
           </div>
         </div>
