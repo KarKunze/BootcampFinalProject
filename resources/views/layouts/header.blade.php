@@ -4,7 +4,7 @@
             <div class="container-fluid">
               <a href="/" class="navbar-left"><img src="{{ asset('/images/walkinghorse.png') }}" height="80" width="90"></a>
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    Moody in the City
+                    Moody in the City 
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
