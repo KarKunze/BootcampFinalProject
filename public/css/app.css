@@ -10492,49 +10492,49 @@ p {
 }
 
 #art.jumbotron {
-  background-image: url("/storage/panmural.jpg");
+  background-image: url("/images/panmural.jpg");
   background-size: cover;
   background-position: center;
 }
 
 #eat.jumbotron {
-  background-image: url("/storage/artsplace2.jpg");
+  background-image: url("/images/artsplace2.jpg");
   background-size: cover;
   background-position: center bottom;
 }
 
 #moody.jumbotron {
-  background-image: url("/storage/thorobredpark.jpg");
+  background-image: url("/images/thorobredpark.jpg");
   background-size: cover;
   background-position: center;
 }
 
 #local.jumbotron {
-  background-image: url("/storage/skycrane.jpg");
+  background-image: url("/images/skycrane.jpg");
   background-size: cover;
   background-position: center;
 }
 
 #music.jumbotron {
-  background-image: url("/storage/louis.jpg");
+  background-image: url("/images/louis.jpg");
   background-size: cover;
   background-position: center;
 }
 
 #places.jumbotron {
-  background-image: url("/storage/sculpture.jpg");
+  background-image: url("/images/sculpture.jpg");
   background-size: cover;
   background-position: center;
 }
 
 #create.jumbotron {
-  background-image: url("/storage/banks.jpg");
+  background-image: url("/images/banks.jpg");
   background-size: cover;
   background-position: center;
 }
 
 #edit.jumbotron {
-  background-image: url("/storage/parkinglot.jpg");
+  background-image: url("/images/parkinglot.jpg");
   background-size: cover;
   background-position: center;
 }
