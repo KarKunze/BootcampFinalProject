@@ -18,7 +18,7 @@ class PagesController extends Controller {
       // receive from the model
       // compile or process data from the model
       // pass that data to the correct view
-        $posts = \App\post::latest()->where ('creator_id', '=', '6')->paginate(1);
+        $posts = \App\Post::latest()->where ('creator_id', '=', '6')->paginate(1);
         return view('pages.index', compact('posts'));
     }
 
