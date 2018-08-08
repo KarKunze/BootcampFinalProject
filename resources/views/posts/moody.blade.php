@@ -8,7 +8,7 @@
       <h5>Jerry Moody, your guide to Moody in the City.</h5>
     </div>
     <div class="row justify-content-center">
-      <img src="{{ '/images/moodypath.jpg' }}" class="img" height="300" width="400">
+      <img src="{{ asset('/images/moodypath.jpg') }}" class="img" height="300" width="400">
     </div>
   </div>
   <div class="col-md-6">
