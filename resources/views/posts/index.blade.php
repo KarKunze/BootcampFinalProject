@@ -3,7 +3,10 @@
     {{ $flash }}
   </div>
 @endif
+<!-- <h5 class="card-header" style="text-right">Write a Post</h5> -->
+
 <div class="container" style="margin-top: 10px;">
+
   @foreach ($posts as $post)
 <div class="row">
   <div class="row">
@@ -18,7 +21,7 @@
         @if ($post->image)
         <img class="mx-auto d-block post-image" src="{{ secure_asset("https://s3.us-east-2.amazonaws.com/moodyinthecity/$post->image") }}" alt="">
         @else
-        <img class="mx-auto d-block post-image" src="/storage/walkinghorse.png" alt="">
+        <img class="mx-auto d-block post-image" src="{{ asset('/storage/walkinghorse.png') }}" alt="">
         @endif
       </div>
     </div>
