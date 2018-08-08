@@ -20,10 +20,7 @@
                     <ul class="navbar-nav ml-auto">
                       <li>
                         <form class="form-inline ml-auto">
-              <!-- <div class="md-form my-0">
-                  <input class="form-control-xs" type="text" placeholder="Search" aria-label="Search">
-              </div>
-              <button href="#" class="btn-sm btn-light my-0 ml-sm-0" type="submit"><i class="fas fa-search"></i></button> -->
+              
           </form>
                       </li>
                         @guest
