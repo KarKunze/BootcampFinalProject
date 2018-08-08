@@ -9,7 +9,7 @@
       Promoting our local arts, music, events, places, and businesses
     </div>
     <ul class="list-group list-group-flush">
-      <li class="list-group-item text-center"><img class="menu-image2" src="{{ asset('/storage/bench.jpg') }}" height="100" width="120"><img class="menu-image" src="{{ asset('/storage/artists.jpg') }}" height="100" width="120"><a class="nav-link" href='/art'><strong>Art</strong></a></li>
+      <li class="list-group-item text-center"><img class="menu-image2" src="{{ asset('/images/bench.jpg') }}" height="100" width="120"><img class="menu-image" src="{{ asset('/storage/artists.jpg') }}" height="100" width="120"><a class="nav-link" href='/art'><strong>Art</strong></a></li>
       <li class="list-group-item text-center"><img class="menu-image2" src="{{ asset('/storage/mmmb.jpg') }}"height="100" width="120"><img class="menu-image" src="{{ asset('/storage/bluegrass.jpg') }}"height="100" width="120"><a class="nav-link" href='/music'><strong>Music</strong></a></li>
       <li class="list-group-item text-center"><img class="menu-image2" src="{{ asset('/storage/isaac.jpg') }}"height="100" width="120"><img class="menu-image" src="{{ asset('/storage/storywalk.jpg') }}" height="100" width="120"><a class="nav-link" href='/places'><strong>Places</strong></a></li>
       <li class="list-group-item text-center"><img class="menu-image2" src="{{ asset('/storage/3rdst.jpg') }}" height="100" width="120"><img class="menu-image" src="{{ asset('/storage/local.jpg') }}"height="100" width="120"><a class="nav-link" href='/eatdrink'><strong>Eat & <br>Drink</strong></a></li>

@@ -2,7 +2,7 @@
 
         <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
             <div class="container-fluid">
-              <a href="/" class="navbar-left"><img src="{{ asset('/storage/walkinghorse.png') }}" height="80" width="90"></a>
+              <a href="/" class="navbar-left"><img src="{{ asset('/images/walkinghorse.png') }}" height="80" width="90"></a>
                 <a class="navbar-brand" href="{{ url('/') }}">
                     Moody in the City
                 </a>
