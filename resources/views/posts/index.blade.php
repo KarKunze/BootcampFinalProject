@@ -3,7 +3,7 @@
     {{ $flash }}
   </div>
 @endif
-<!-- <h5 class="card-header" style="text-right">Write a Post</h5> -->
+<h5 class="card-header" style="text-right">Community Posts</h5>
 
 <div class="container" style="margin-top: 10px;">
 
