@@ -20,7 +20,7 @@
                     <ul class="navbar-nav ml-auto">
                       <li>
                         <form class="form-inline ml-auto">
-              
+
           </form>
                       </li>
                         @guest
