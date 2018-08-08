@@ -21,7 +21,7 @@
         @if ($post->image)
         <img class="mx-auto d-block post-image" src="{{ secure_asset("https://s3.us-east-2.amazonaws.com/moodyinthecity/$post->image") }}" alt="">
         @else
-        <img class="mx-auto d-block post-image" src="{{ asset('/storage/walkinghorse.png') }}" alt="">
+        <img class="mx-auto d-block post-image" src="{{ asset('/images/walkinghorse.png') }}" alt="">
         @endif
       </div>
     </div>
