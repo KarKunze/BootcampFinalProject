@@ -13,6 +13,18 @@
   </div>
 @endif
 <div class="container">
+  @if (count($errors))
+    <div class="form-group">
+      <div class="alert alert-danger">
+        <ul>
+          @foreach ($errors->all() as $error)
+            <li>{{ $error }}</li>
+            <li>Please limit image uploads to 2 MB.</li>
+          @endforeach
+        </ul>
+      </div>
+    </div>
+  @endif
   <div class="card editPost">
     <div class="card-body text-white bg-secondary">
       <h4 class="card-title text-center">Edit your post</h4>
@@ -44,19 +56,6 @@
         <div class="form-group">
         <button type="submit" class="btn btn-light mt-3">Update</button>
         </div>
-
-        @if (count($errors))
-          <div class="form-group">
-            <div class="alert alert-danger">
-              <ul>
-                @foreach ($errors->all() as $error)
-                  <li>{{ $error }}</li>
-                  <li>Please limit image uploads to 2 MB.</li>
-                @endforeach
-              </ul>
-            </div>
-          </div>
-        @endif
       </form>
     </div>
   </div>

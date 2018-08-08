@@ -2,7 +2,7 @@
 
 @section('page-id', ('eat'))
 
-@section('page-title', ('Eat and Drink in the City'))
+@section('page-title', ('Eat & Drink in the City'))
 
 @section('content')
 
