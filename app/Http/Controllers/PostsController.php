@@ -105,7 +105,8 @@ class PostsController extends Controller
       }
       else
       {
-          return redirect()->route('/');
+          // return redirect()->route('index');
+          return redirect()->route($post->category_page());
       }
 
     }
@@ -175,7 +176,8 @@ class PostsController extends Controller
 
     } else {
             // $request->session()->flash('status', 'You don\'t have permission to delete this post.');
-            return redirect()->route('/');
+            // return redirect()->route('index');
+            return redirect()->route($post->category_page());
         }
     }
 
