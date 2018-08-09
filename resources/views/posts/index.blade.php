@@ -30,12 +30,16 @@
 
   <div class="row" id="post-footer">
     <p style="margin-left: 20px;" id="postfooter-text"> by {{ $post->user_name() }} | {{ $post->created_at->toFormattedDateString() }} | <i class="fas fa-tags"></i> {{ $post->category_name() }} |  </p>
+      @auth
+      @if (\Auth::user()->role_id == 1 || $post->creator_id == \Auth::user()->id)
       <p><button class="btn-sm btn-outline-primary ml-3"><a href= "/posts/{{ $post->id }}/edit"><i class="fas fa-pencil-alt"></i></a></button>
       <form action="/posts/{{ $post->id }}" method="post">
         @method('DELETE')
         @csrf
         <button class="btn-sm btn-outline-danger ml-3" type="submit"><i class="far fa-trash-alt"></i></button></p>
       </form>
+      @endif
+      @endauth
   </div>
 
 </div>
