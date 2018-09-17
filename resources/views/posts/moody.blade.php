@@ -34,9 +34,9 @@
   @foreach ($posts as $post)
 <div class="row">
   <div class="row">
-    <div class="col">
-      <h3 style="margin-left: 10px;" id="featured"><strong>{{ $post->title }}</strong></h3>
-    </div>
+    <!-- <div class="col"> -->
+      <h3 style="margin-left: 30px;" id="featured"><strong>{{ $post->title }}</strong></h3>
+    <!-- </div> -->
   </div>
 <div class="container">
   <div class="row">
@@ -53,7 +53,7 @@
   </div>
 
   <div class="row" id="post-footer">
-    <p id="postfooter-text"  style="margin-left: 10px;"> by {{ $post->user_name() }} | {{ $post->created_at->toFormattedDateString() }} | <i class="fas fa-tags"></i> {{ $post->category_name() }} |  <i class="fa fa-thumbs-up" aria-hidden="true"></i> |
+    <p id="postfooter-text"  style="margin-left: 20px;"> by {{ $post->user_name() }} | {{ $post->created_at->toFormattedDateString() }} | <i class="fas fa-tags"></i> {{ $post->category_name() }} |  <i class="fa fa-thumbs-up" aria-hidden="true"></i> |
       @auth
       @if (\Auth::user()->role_id == 1 || $post->creator_id == \Auth::user()->id)
       <button class="btn-sm btn-outline-primary ml-3"><a href= "/posts/{{ $post->id }}/edit"><i class="fas fa-pencil-alt"></i></a></button>

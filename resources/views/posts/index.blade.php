@@ -10,9 +10,9 @@
   @foreach ($posts as $post)
 <div class="row">
   <div class="row">
-    <div class="col">
-      <h3 style="margin-left: 20px;"><strong>{{ $post->title }}</strong></h3>
-    </div>
+    <!-- <div class="col"> -->
+      <h3 style="margin-left: 30px;"><strong>{{ $post->title }}</strong></h3>
+    <!-- </div> -->
   </div>
 <div class="container-fluid">
   <div class="row">
